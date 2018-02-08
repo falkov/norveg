@@ -1,0 +1,18 @@
+<!-- navbar { -->
+{% block block_navbar %}
+    <nav class="navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav" style="background: #300116;">
+        <div class="float-left">
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a>
+        </div>
+
+        <div class="breadcrumb-dn mr-auto">
+            <p>Norveg</p>
+        </div>
+
+        <ul class="nav navbar-nav nav-flex-icons ml-auto">
+            <div class="__my"> {% block block_navbar_right %}{% endblock block_navbar_right %} </div>
+            <div class="__my"> {{ navbar_right }} </div>
+        </ul>
+    </nav>
+{% endblock block_navbar %}
+<!-- navbar } -->

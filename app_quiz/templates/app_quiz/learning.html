@@ -1,0 +1,119 @@
+{% extends '__base.html' %}
+
+
+{% block block_title %}
+    Привет, falkov!!
+{% endblock %}
+
+
+{% block block_navbar_right %}
+    Это block_navbar_right
+{% endblock %}
+
+
+{% block block_content %}
+    <!-- ExamCard { -->
+    <ul class="nav nav-tabs z-depth-2 animated fadeInDown align-items-center" style="background: #570230;" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#panel1" role="tab">en</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#panel2" role="tab">ru</a>
+        </li>
+
+        <div style="position: absolute; right: 20px; color: white">
+            {{ section_number }}. {{ section_text }} &nbsp;({{ question_num_in_section }} of {{ question_amount }})
+        </div>
+    </ul>
+
+    <div class="tab-content card lime lighten-5 z-depth-2 animated fadeInUp">
+        <div class="tab-pane fade in show active" id="panel1" role="tabpanel">
+            <p class="h5" style="color: #570230;">
+                {{ question_num_in_section }}. {{ question_eng }}
+            </p>
+
+            <hr style="background: #570230;">
+
+            {% for answer in dict_answers.values %}
+                <div class="form-group">
+                    <input type="checkbox" class="filled-in" id="{{ answer.checkbox_eng }}" onclick="$('#{{ answer.checkbox_eng }}'.replace('eng','rus')).prop('checked', $('#{{ answer.checkbox_eng }}').prop('checked'))">
+                    <label for="{{ answer.checkbox_eng }}">{{ answer.eng }}</label>
+                </div>
+            {% endfor %}
+
+            <hr style="background: #570230;">
+        </div>
+
+        <div class="tab-pane fade" id="panel2" role="tabpanel">
+            <p class="h5" style="color: #570230;">
+                {{ question_num_in_section }}. {{ question_rus }}
+            </p>
+
+            <hr style="background: #570230;">
+
+            {% for answer in dict_answers.values %}
+                <div class="form-group">
+                    <input type="checkbox" class="filled-in" id="{{ answer.checkbox_rus }}" onclick="$('#{{ answer.checkbox_rus }}'.replace('rus','eng')).prop('checked', $('#{{ answer.checkbox_rus }}').prop('checked'))">
+                    <label for="{{ answer.checkbox_rus }}">{{ answer.rus }}</label>
+                </div>
+            {% endfor %}
+
+            <hr style="background: #570230;">
+        </div>
+
+        <div>
+            <button type="button" id="btn_prev" class="btn btn-rounded" style="background: #570230;" onclick="prev_click()"><i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp;&nbsp;prev</button>
+            <button type="button" class="btn btn-rounded" style="color: yellow; background: #7f0257;" onclick="check_click()">&nbsp check &nbsp my &nbsp answer &nbsp</button>
+            <button type="button" id="btn_next" class="btn btn-rounded" style="background: #570230;" onclick="next_click()"> next &nbsp;&nbsp; <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            <button type="button" class="btn btn-rounded" style="background: #466e4a; position: absolute; right: 20px;" onclick="help_click()">help &nbsp;&nbsp;<i class="fa fa-medkit" aria-hidden="true"></i></button>
+        </div>
+    </div>
+    <!-- ExamCard } -->
+
+    <script>
+        jQuery(function($) {
+            var quest_num_in_sec = {{ question_num_in_section }};
+
+            if(quest_num_in_sec < 2) { jQuery('#btn_prev').prop('disabled', true); }
+            if(quest_num_in_sec >= {{ question_amount }}) { jQuery('#btn_next').prop('disabled', true); }
+        });
+
+        function prev_click() {
+            var href_split_array = window.location.href.split('/');
+            var new_href = "";
+
+            href_split_array[href_split_array.length-2] = parseInt(href_split_array[href_split_array.length-2]) - 1;
+
+            for ( loop = 0; loop < href_split_array.length; loop++ ) {
+                new_href += href_split_array[loop];
+                new_href += "/";
+            }
+
+            window.location.href = new_href.substr(0, new_href.length-1);
+        }
+        function next_click() {
+            var href_split_array = window.location.href.split('/');
+            var new_href = "";
+
+            href_split_array[href_split_array.length-2] = parseInt(href_split_array[href_split_array.length-2]) + 1;
+
+            for ( loop = 0; loop < href_split_array.length; loop++ ) {
+                new_href += href_split_array[loop];
+                new_href += "/";
+            }
+
+            window.location.href = new_href.substr(0, new_href.length-1);
+        }
+
+        function check_click() {
+            alert('check');
+        }
+
+        function help_click() {
+            alert('help');
+        }
+    </script>
+
+{% endblock block_content %}
+
+ fa-arrow-right" aria-hidden="true"></i>#}

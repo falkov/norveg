@@ -1,0 +1,93 @@
+{% load staticfiles %}
+
+<!-- sidebar { -->
+<div id="slide-out" class="side-nav sn-bg-4 fixed">
+    <ul class="custom-scrollbar list-unstyled">
+        <li>
+            <div class="logo-wrapper waves-light"
+                 style="height: 140px; background: url('{% static 'img/mers.png' %}') no-repeat center center;">
+            </div>
+        </li>
+
+        <li>
+            <ul class="collapsible collapsible-accordion">
+                <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-graduation-cap"></i>Learning<i class="fa fa-angle-down rotate-icon"></i></a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href={% url 'learning' section_number=1 question_num_in_section=1 %} class="waves-effect">1. Driver’s licence</a></li>
+                            <li><a href={% url 'learning' section_number=2 question_num_in_section=1 %} class="waves-effect">2. Car’s construction</a></li>
+                            <li><a href={% url 'learning' section_number=3 question_num_in_section=1 %} class="waves-effect">3. Responsibility</a></li>
+                            <li><a href={% url 'learning' section_number=4 question_num_in_section=1 %} class="waves-effect">4. Human capacity</a></li>
+                            <li><a href={% url 'learning' section_number=5 question_num_in_section=1 %} class="waves-effect">5. Road traffic system</a></li>
+                            <li><a href={% url 'learning' section_number=6 question_num_in_section=1 %} class="waves-effect">6. Road markings and signs</a></li>
+                            <li><a href={% url 'learning' section_number=7 question_num_in_section=1 %} class="waves-effect">7. Road Traffic Act</a></li>
+                            <li><a href={% url 'learning' section_number=8 question_num_in_section=1 %} class="waves-effect">8. Basic rules</a></li>
+                            <li><a href={% url 'learning' section_number=9 question_num_in_section=1 %} class="waves-effect">9. Communication / interaction</a></li>
+                            <li><a href={% url 'learning' section_number=10 question_num_in_section=1 %} class="waves-effect">10. Signalling</a></li>
+                            <li><a href={% url 'learning' section_number=11 question_num_in_section=1 %} class="waves-effect">11. Adapting speed</a></li>
+                            <li><a href={% url 'learning' section_number=12 question_num_in_section=1 %} class="waves-effect">12. Positioning on the road</a></li>
+                            <li><a href={% url 'learning' section_number=13 question_num_in_section=1 %} class="waves-effect">13. Giving way</a></li>
+                            <li><a href={% url 'learning' section_number=14 question_num_in_section=1 %} class="waves-effect">14. Reversing / turning round</a></li>
+                            <li><a href={% url 'learning' section_number=15 question_num_in_section=1 %} class="waves-effect">15. Standing and parking</a></li>
+                            <li><a href={% url 'learning' section_number=16 question_num_in_section=1 %} class="waves-effect">16. Level crossing</a></li>
+                            <li><a href={% url 'learning' section_number=17 question_num_in_section=1 %} class="waves-effect">17. Motorways</a></li>
+                            <li><a href={% url 'learning' section_number=18 question_num_in_section=1 %} class="waves-effect">18. Driving in tunnels</a></li>
+                            <li><a href={% url 'learning' section_number=19 question_num_in_section=1 %} class="waves-effect">19. Driving in queues</a></li>
+                            <li><a href={% url 'learning' section_number=20 question_num_in_section=1 %} class="waves-effect">20. Driving on slippery roads</a></li>
+                            <li><a href={% url 'learning' section_number=21 question_num_in_section=1 %} class="waves-effect">21. Night driving</a></li>
+                            <li><a href={% url 'learning' section_number=22 question_num_in_section=1 %} class="waves-effect">22. The hazards of driving</a></li>
+                            <li><a href={% url 'learning' section_number=23 question_num_in_section=1 %} class="waves-effect">23. Driving on the open road</a></li>
+                            <li><a href={% url 'learning' section_number=24 question_num_in_section=1 %} class="waves-effect">24. Economical driving</a></li>
+                            <li><a href={% url 'learning' section_number=25 question_num_in_section=1 %} class="waves-effect">25. Life-saving first aid</a></li>
+                            <li><a href={% url 'learning' section_number=26 question_num_in_section=1 %} class="waves-effect">26. Traffic signs</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-hand-pointer-o"></i> Instruction<i class="fa fa-angle-down rotate-icon"></i></a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="#" class="waves-effect">For bloggers</a>
+                            </li>
+                            <li><a href="#" class="waves-effect">For authors</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-eye"></i> About<i class="fa fa-angle-down rotate-icon"></i></a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="#" class="waves-effect">Introduction</a>
+                            </li>
+                            <li><a href="#" class="waves-effect">Monthly meetings</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-envelope-o"></i> Contact me<i class="fa fa-angle-down rotate-icon"></i></a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="#" class="waves-effect">FAQ</a>
+                            </li>
+                            <li><a href="#" class="waves-effect">Write a message</a>
+                            </li>
+                            <li><a href="#" class="waves-effect">FAQ</a>
+                            </li>
+                            <li><a href="#" class="waves-effect">Write a message</a>
+                            </li>
+                            <li><a href="#" class="waves-effect">FAQ</a>
+                            </li>
+                            <li><a href="#" class="waves-effect">Write a message</a>
+                            </li>
+                            <li><a href="#" class="waves-effect">FAQ</a>
+                            </li>
+                            <li><a href="#" class="waves-effect">Write a message</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div class="sidenav-bg mask-strong"></div>
+</div>
+<!-- sidebar } -->

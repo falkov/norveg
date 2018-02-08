@@ -16,13 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from app_1 import views
-
+import app_main.views
+import app_quiz.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    path('falkov/', views.home_falkov, name='home_falkov'),
-    path('', views.home, name='home'),
+    path('learning/<int:section_number>/<int:question_num_in_section>/', app_quiz.views.learning, name='learning'),
+
+    path('', app_main.views.home, name='app_main'),
 
 ]
+

@@ -1,8 +1,8 @@
 {% extends '__base.html' %}
-
+{% load staticfiles %}
 
 {% block block_title %}
-    Привет, falkov!!
+    Learning
 {% endblock %}
 
 
@@ -13,7 +13,7 @@
 
 {% block block_content %}
     <!-- ExamCard { -->
-    <ul class="nav nav-tabs z-depth-2 animated fadeInDown align-items-center" style="background: #570230;" role="tablist">
+    <ul class="nav nav-tabs z-depth-2 animated fadeIn align-items-center" style="background: #570230;" role="tablist">
         <li class="nav-item">
             <a class="nav-link active" data-toggle="tab" href="#panel1" role="tab">en</a>
         </li>
@@ -26,11 +26,26 @@
         </div>
     </ul>
 
-    <div class="tab-content card lime lighten-5 z-depth-2 animated fadeInUp">
+    <div class="tab-content card lime lighten-5 z-depth-2 animated fadeIn">
         <div class="tab-pane fade in show active" id="panel1" role="tabpanel">
-            <p class="h5" style="color: #570230;">
-                {{ question_num_in_section }}. {{ question_eng }}
-            </p>
+            {% if question_image %}
+                <div class="container-flued">
+                    <div class="row align-items-center">
+                        <div class="col-8">
+                            <p class="h5" style="color: #570230;">
+                                {{ question_num_in_section }}. {{ question_eng }}
+                            </p>
+                        </div>
+                        <div class="col-4">
+                            <img src="{% static 'img/q_img/' %}{{ question_image }}"/>
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                <p class="h5" style="color: #570230;">
+                    {{ question_num_in_section }}. {{ question_eng }}
+                </p>
+            {% endif %}
 
             <hr style="background: #570230;">
 
@@ -45,9 +60,24 @@
         </div>
 
         <div class="tab-pane fade" id="panel2" role="tabpanel">
-            <p class="h5" style="color: #570230;">
-                {{ question_num_in_section }}. {{ question_rus }}
-            </p>
+            {% if question_image %}
+                <div class="container-flued">
+                    <div class="row align-items-center">
+                        <div class="col-8">
+                            <p class="h5" style="color: #570230;">
+                                {{ question_num_in_section }}. {{ question_rus }}
+                            </p>
+                        </div>
+                        <div class="col-4">
+                            <img src="{% static 'img/q_img/' %}{{ question_image }}"/>
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                <p class="h5" style="color: #570230;">
+                    {{ question_num_in_section }}. {{ question_rus }}
+                </p>
+            {% endif %}
 
             <hr style="background: #570230;">
 
@@ -62,10 +92,10 @@
         </div>
 
         <div>
-            <button type="button" id="btn_prev" class="btn btn-rounded" style="background: #570230;" onclick="prev_click()"><i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp;&nbsp;prev</button>
-            <button type="button" class="btn btn-rounded" style="color: yellow; background: #7f0257;" onclick="check_click()">&nbsp check &nbsp my &nbsp answer &nbsp</button>
-            <button type="button" id="btn_next" class="btn btn-rounded" style="background: #570230;" onclick="next_click()"> next &nbsp;&nbsp; <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
-            <button type="button" class="btn btn-rounded" style="background: #466e4a; position: absolute; right: 20px;" onclick="help_click()">help &nbsp;&nbsp;<i class="fa fa-medkit" aria-hidden="true"></i></button>
+            <button type="button" id="btn_prev" class="btn btn-rounded" style="background: #570230;" onclick="btn_prev_click()"><i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp;&nbsp;prev</button>
+            <button type="button" class="btn btn-rounded" style="color: yellow; background: #7f0257;" onclick="btn_check_click()">&nbsp check &nbsp my &nbsp answer &nbsp</button>
+            <button type="button" id="btn_next" class="btn btn-rounded" style="background: #570230;" onclick="btn_next_click()"> next &nbsp;&nbsp; <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            <button type="button" class="btn btn-rounded" style="background: #466e4a; position: absolute; right: 20px;" onclick="btn_help_click()">help &nbsp;&nbsp;<i class="fa fa-medkit" aria-hidden="true"></i></button>
         </div>
     </div>
     <!-- ExamCard } -->
@@ -78,7 +108,7 @@
             if(quest_num_in_sec >= {{ question_amount }}) { jQuery('#btn_next').prop('disabled', true); }
         });
 
-        function prev_click() {
+        function btn_prev_click() {
             var href_split_array = window.location.href.split('/');
             var new_href = "";
 
@@ -88,10 +118,9 @@
                 new_href += href_split_array[loop];
                 new_href += "/";
             }
-
             window.location.href = new_href.substr(0, new_href.length-1);
         }
-        function next_click() {
+        function btn_next_click() {
             var href_split_array = window.location.href.split('/');
             var new_href = "";
 
@@ -101,19 +130,42 @@
                 new_href += href_split_array[loop];
                 new_href += "/";
             }
-
             window.location.href = new_href.substr(0, new_href.length-1);
         }
 
-        function check_click() {
-            alert('check');
+        function btn_check_click() {
+            var state;
+            var is_right_answer = true;
+
+            {% for answer in dict_answers.values %}
+                {% if answer.correct == 'false' %}
+                    state = false;
+                {% elif answer.correct == 'true' %}
+                    state = true;
+                {% endif %}
+
+                chbox = jQuery('#{{ answer.checkbox_eng }}');
+
+                if(chbox.is(':checked') != state) {
+                    is_right_answer = false;
+                    jQuery('label[for="{{ answer.checkbox_eng }}"]').css({'text-decoration':'line-through'});
+                }
+            {% endfor %}
+
+            console.log(is_right_answer);
         }
 
-        function help_click() {
-            alert('help');
+        function btn_help_click() {
+            {% for answer in dict_answers.values %}
+                {% if answer.correct == 'false' %}
+                    jQuery('#{{ answer.checkbox_eng }}').prop('checked', false);
+                    jQuery('#{{ answer.checkbox_rus }}').prop('checked', false);
+                {% elif answer.correct == 'true' %}
+                    jQuery('#{{ answer.checkbox_eng }}').prop('checked', true);
+                    jQuery('#{{ answer.checkbox_rus }}').prop('checked', true);
+                {% endif %}
+            {% endfor %}
         }
     </script>
 
 {% endblock block_content %}
-
- fa-arrow-right" aria-hidden="true"></i>#}

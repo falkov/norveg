@@ -29,7 +29,8 @@ class Answer(models.Model):
     text_eng = models.CharField(max_length=300)
     text_rus = models.CharField(max_length=300)
     text_nor = models.CharField(max_length=300)
-    correct = models.BooleanField()
+    # correct = models.BooleanField()
+    correct = models.CharField(max_length=10)
 
     def __str__(self):
         return self.text_eng

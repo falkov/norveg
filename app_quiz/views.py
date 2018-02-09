@@ -40,6 +40,7 @@ def learning(request, section_number, question_num_in_section):
     question_eng = Question.objects.all()[question_num_real-1].text_eng
     question_rus = Question.objects.all()[question_num_real-1].text_rus
     question_pk = Question.objects.filter(number=question_num_real)[0].id
+    question_image = Question.objects.all()[question_num_real-1].image
 
     answers = list(Answer.objects.filter(question=question_pk).values_list('text_eng', 'text_rus', 'text_nor', 'letter', 'correct'))
     random.shuffle(answers)
@@ -62,9 +63,6 @@ def learning(request, section_number, question_num_in_section):
             }
         )
 
-    print(request.build_absolute_uri())
-    # url_next_question = { % url 'learning' 1 1 %}
-
     return render(request, 'app_quiz/learning.html', {
         'section_number': section_number,
         'section_text': section_text,
@@ -73,5 +71,6 @@ def learning(request, section_number, question_num_in_section):
         'question_eng': question_eng,
         'question_rus': question_rus,
         'dict_answers': dict_answers,
+        'question_image': question_image,
         # 'navbar_right': 'привет, falkov!',
     })

@@ -72,5 +72,9 @@ def learning(request, section_number, question_num_in_section):
         'question_rus': question_rus,
         'dict_answers': dict_answers,
         'question_image': question_image,
+        'right_msg': random.choice(['YES! YOU ARE RIGHT!', 'GREAT!', 'RIGHT ANSWER!', 'CORRECT ANSWER!', 'THAT IS RIGHT!']),
+        'right_img': 'yes_' + str(random.choice(range(1, 9))) + '.gif',
+        'wrong_msg': random.choice(['NO! YOU ARE WRONG!', 'WRONG!', 'WRONG ANSWER!', 'INCORRECT ANSWER!', 'THAT IS WRONG!']),
+        'wrong_img': 'no_' + str(random.choice(range(1, 10))) + '.gif',
         # 'navbar_right': 'привет, falkov!',
     })

@@ -1,26 +1,26 @@
-/* Your custom styles */
-body {
-    /*height: 1000px;*/
-    /*background: #0d47a1;*/
-}
+/*!* Your custom styles *!*/
+/*body {*/
+    /*!*height: 1000px;*!*/
+    /*!*background: #0d47a1;*!*/
+/*}*/
 
-.card-head {
-    background: #700438;
-}
+/*.card-head {*/
+    /*background: #700438;*/
+/*}*/
 
-.__question {
-    color: red;
-}
+/*.__question {*/
+    /*color: red;*/
+/*}*/
 
-.__btn {
-    background: #700438;
-}
+/*.__btn {*/
+    /*background: #700438;*/
+/*}*/
 
-.__btn-transparent {
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-}
+/*.__btn-transparent {*/
+    /*background-color: Transparent;*/
+    /*background-repeat:no-repeat;*/
+    /*border: none;*/
+    /*cursor:pointer;*/
+    /*overflow: hidden;*/
+    /*outline:none;*/
+/*}*/

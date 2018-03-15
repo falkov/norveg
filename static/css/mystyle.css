@@ -24,3 +24,26 @@
     /*overflow: hidden;*/
     /*outline:none;*/
 /*}*/
+
+/*.qnum_no_answer {*/
+    /*color: black;*/
+/*}*/
+
+/*.qnum_is_answer {*/
+    /*background: #53e5ed;*/
+    /*color: black;*/
+    /*border: red;*/
+/*}*/
+
+/*.qnum_right_answer {*/
+    /*background: #9dd6a0;*/
+    /*color: black;*/
+    /*border: red;*/
+/*}*/
+
+/*.qnum_wrong_answer {*/
+    /*background: #fd736a;*/
+    /*color: black;*/
+    /*border: red;*/
+/*}*/
+

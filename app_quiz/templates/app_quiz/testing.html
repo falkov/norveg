@@ -1,0 +1,153 @@
+{% extends '__base.html' %}
+{% load staticfiles %}
+{% load _falkov_tags_filters %}
+
+
+{% block block_title %}
+    Testing
+{% endblock %}
+
+
+{% block block_head %}
+    <script src="{% static 'js/mytimer.js' %}"></script>
+{% endblock block_head %}
+
+
+{% block block_navbar_right %}
+    <i class="fa fa-institution" aria-hidden="true"></i>&nbsp;&nbsp;TESTING
+{% endblock %}
+
+
+{% block block_content %}
+
+    <!-- Questions map { -->
+    {% for quest in lst_questions_map.items %}
+        <span id="qmap_{{ forloop.counter }}" class="{{ quest.1 }}" style="cursor: pointer" onclick="qmap_click({{ quest.0 }})">{{ quest.0|qnum_to_string }}</span>&nbsp;&nbsp;
+    {% endfor %}
+    <!-- Questions map } -->
+
+    <p>&nbsp;</p>
+
+    <p id="clockdiv" class="text-center" style="font-size: larger;"></p>
+
+    <!-- TestCard { -->
+    <ul class="nav nav-tabs z-depth-2 animated fadeIn align-items-center" style="background: #570230;" role="tablist">
+        <span style="color: white">TEST</span>
+
+        <div style="position: absolute; right: 20px; color: white">
+            {{ question_number }} of {{ list_qna|length }}  - sec. {{ qna_curr.question.section }},  # {{ qna_curr.question.number }}
+        </div>
+    </ul>
+
+    <div class="tab-content card lime lighten-5 z-depth-2 animated fadeIn">
+        <div class="tab-pane fade in show active" id="panel1" role="tabpanel">
+            {% if qna_curr.question.image %}
+                <div class="container-flued">
+                    <div class="row align-items-center">
+                        <div class="col-9">
+                            <p class="h5" style="color: #570230;">{{ qna_curr.question.text_eng }}</p>
+                        </div>
+                        <div class="col-3"><img src="{% static 'img/q_img/' %}{{ qna_curr.question.image }}"/></div>
+                    </div>
+                </div>
+            {% else %}
+                <p class="h5" style="color: #570230;">{{ qna_curr.question.text_eng }}</p>
+            {% endif %}
+
+            <hr style="background: #570230;">
+
+            {% for answer in qna_curr.answers.values %}
+                <div>
+                    <input type="checkbox" class="filled-in" id="{{ answer.checkbox }}" {{ answer.user_answer }}>
+                    <label for="{{ answer.checkbox }}">{{ answer.text_eng }} - {{ answer.letter }}. {{ answer.correct }}</label>
+                </div>
+            {% endfor %}
+
+            <hr style="background: #570230;">
+        </div>
+
+        <div>
+            <button type="button" id="btn_prev" class="btn btn-rounded" style="background: #570230;" onclick="btn_prev_click()"><i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp;&nbsp;prev</button>
+            <button type="button" id="btn_next" class="btn btn-rounded" style="background: #570230;" onclick="btn_next_click()"> next &nbsp;&nbsp; <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            <button type="button" class="btn btn-rounded" style="background: #466e4a; position: absolute; right: 20px;" onclick="btn_endtest_click()">END TEST &nbsp;&&nbsp; CHECK</button>
+        </div>
+    </div>
+    <!-- TestCard } -->
+
+    <script>
+        jQuery(function($) {
+            {% if new_test == 'yes' %}
+                initializeClock('clockdiv', 45, true);
+            {% else %}
+                initializeClock('clockdiv', 45, false);
+            {% endif %}
+
+            var question_number = {{ question_number }};
+            var questions_amount = {{ list_qna|length }};
+
+            console.log({{ question_number }});
+
+            if(question_number < 2) { jQuery('#btn_prev').prop('disabled', true); }
+            if(question_number >= questions_amount) { jQuery('#btn_next').prop('disabled', true); }
+        });
+
+        function set_url(qnum) {
+            var user_answer = {{ question_number }};
+
+            var href_split_array = window.location.href.split('/');
+            var new_href = "";
+
+            {% for answer in qna_curr.answers.values %}
+                if(jQuery('#{{ answer.checkbox }}').prop('checked')) {
+                    user_answer += '-1'
+                }
+                else {
+                    user_answer += '-0'
+                }
+            {% endfor %}
+
+            href_split_array[4] = 'no';
+            href_split_array[5] = parseInt(qnum);
+
+            if(href_split_array.length > 6) {
+                href_split_array[6] = user_answer;
+                user_answer = '';
+            }
+
+            for ( loop = 0; loop < href_split_array.length; loop++ ) {
+                new_href += href_split_array[loop];
+                new_href += "/";
+            }
+
+            new_href = new_href.substr(0, new_href.length-1) + user_answer;
+            return(new_href);
+        }
+
+        function qmap_click(qnum) {
+            window.location.href = set_url(qnum);
+        }
+
+        function btn_prev_click() {
+            window.location.href = set_url( {{ question_number }} - 1);
+        }
+
+        function btn_next_click() {
+            window.location.href = set_url( {{ question_number }} + 1);
+        }
+
+        function btn_endtest_click() {
+            href_split_arr = set_url({{ question_number }}).split('/');
+            new_href = href_split_arr[0] + '//' + href_split_arr[2] + '/endtest/' + href_split_arr[6] + '/';
+            window.location.href = new_href;
+        }
+
+        function time_is_over() {
+            href_split_arr = set_url({{ question_number }}).split('/');
+            new_href = href_split_arr[0] + '//' + href_split_arr[2] + '/endtest/' + href_split_arr[6] + '/';
+            window.location.href = new_href;
+        }
+    </script>
+
+{% endblock block_content %}
+
+

@@ -10,16 +10,23 @@ home
 {% endblock block_navbar_right %}
 
 
-{% block content %}
-Это страница home  .   html
-{% endblock content %}
+{% block block_content %}
+    <p class="h5 text-justify text-uppercase text-center animated fadeInDown" style="color: #570230;">
+        Этот сайт предназначен для тренировки и пробной сдачи экзамена<br>
+        на водительские права в Норвегии<br>
+        на английском языке
+    </p>
 
+    <br>
 
+    <p class="h5 text-justify text-uppercase text-center animated fadeIn" style="color: #570230;">
+        Сначала пройдите все темы в разделе 'learn'<br>
+        (вопросы и ответы даны на английском и русском языках)<br>
+    </p>
 
+    <br>
 
-{#{% block examcard %}#}
-{#<div class="form-group">#}
-{#    <input type="checkbox" id="checkbox1">#}
-{#    <label for="checkbox1">Classic checkbox</label>#}
-{#</div>#}
-{#{% endblock examcard %}#}
+    <p class="h5 text-justify text-uppercase text-center animated fadeInUp" style="color: #570230;">
+        затем попробуйте сдать тест на английском языке<br>45 вопросов за 45 минут
+    </p>
+{% endblock block_content %}

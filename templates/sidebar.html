@@ -10,8 +10,13 @@
         </li>
 
         <li>
+
             <ul class="collapsible collapsible-accordion">
-                <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-graduation-cap"></i>Learning<i class="fa fa-angle-down rotate-icon"></i></a>
+                <li>
+                    <a href={% url 'home'  %} class="waves-effect"><i class="fa fa-home" aria-hidden="true"></i>&nbsp; home</a>
+                </li>
+
+                <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-graduation-cap"></i>Learn<i class="fa fa-angle-down rotate-icon"></i></a>
                     <div class="collapsible-body">
                         <ul>
                             <li><a href={% url 'learning' section_number=1 question_num_in_section=1 %} class="waves-effect">1. Driver’s licence</a></li>
@@ -42,49 +47,13 @@
                             <li><a href={% url 'learning' section_number=26 question_num_in_section=1 %} class="waves-effect">26. Traffic signs</a></li>
                         </ul>
                     </div>
-                </li>
-                <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-hand-pointer-o"></i> Instruction<i class="fa fa-angle-down rotate-icon"></i></a>
-                    <div class="collapsible-body">
+                    <div>
                         <ul>
-                            <li><a href="#" class="waves-effect">For bloggers</a>
-                            </li>
-                            <li><a href="#" class="waves-effect">For authors</a>
-                            </li>
+                            <a href={% url 'testing' new_test='yes' question_number=1 %} class="waves-effect"><i class="fa fa-institution" aria-hidden="true"></i>Test</a>
                         </ul>
                     </div>
                 </li>
-                <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-eye"></i> About<i class="fa fa-angle-down rotate-icon"></i></a>
-                    <div class="collapsible-body">
-                        <ul>
-                            <li><a href="#" class="waves-effect">Introduction</a>
-                            </li>
-                            <li><a href="#" class="waves-effect">Monthly meetings</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-envelope-o"></i> Contact me<i class="fa fa-angle-down rotate-icon"></i></a>
-                    <div class="collapsible-body">
-                        <ul>
-                            <li><a href="#" class="waves-effect">FAQ</a>
-                            </li>
-                            <li><a href="#" class="waves-effect">Write a message</a>
-                            </li>
-                            <li><a href="#" class="waves-effect">FAQ</a>
-                            </li>
-                            <li><a href="#" class="waves-effect">Write a message</a>
-                            </li>
-                            <li><a href="#" class="waves-effect">FAQ</a>
-                            </li>
-                            <li><a href="#" class="waves-effect">Write a message</a>
-                            </li>
-                            <li><a href="#" class="waves-effect">FAQ</a>
-                            </li>
-                            <li><a href="#" class="waves-effect">Write a message</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
+
             </ul>
         </li>
     </ul>

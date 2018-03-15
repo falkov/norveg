@@ -21,10 +21,11 @@ import app_quiz.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
     path('learning/<int:section_number>/<int:question_num_in_section>/', app_quiz.views.learning, name='learning'),
-
-    path('', app_main.views.home, name='app_main'),
-
+    path('testing/<str:new_test>/<int:question_number>/', app_quiz.views.testing, name='testing'),
+    path('testing/<str:new_test>/<int:question_number>/<slug:user_answer>/', app_quiz.views.testing, name='testing'),
+    path('endtest/<slug:user_answer>/', app_quiz.views.end_test, name='end-test'),
+    # path('endtest/<slug:user_answer>/<str:show_question>/', app_quiz.views.end_test, name='end-test'),
+    path('home/', app_main.views.home, name='home'),
 ]
 

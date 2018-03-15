@@ -13,8 +13,10 @@
     <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}">
 {#    <link rel="stylesheet" href="{% static 'css/mdbpro.min.css' %}">#}
     <link rel="stylesheet" href="{% static 'css/mdbpro.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
     <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+
+    {% block block_head %} {% endblock block_head %}
 </head>
 
 <body class="fixed-sn pink-skin" style="background: #fcede6;">
@@ -28,7 +30,6 @@
             </div>
 
             <div class="breadcrumb-dn mr-auto">
-                <p>Norveg</p>
             </div>
 
             <ul class="nav navbar-nav nav-flex-icons ml-auto">
@@ -38,7 +39,7 @@
         <!-- navbar } -->
 {#    </header>#}
 
-    <main>
+    <main style="padding-top: 20px">
         <div class="container-fluid mt-5">
             {% block block_content %} {% endblock block_content %}
         </div>

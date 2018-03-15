@@ -1,0 +1,112 @@
+{% extends '__base.html' %}
+{% load staticfiles %}
+{% load _falkov_tags_filters %}
+
+
+{% block block_title %}
+    Testing
+{% endblock %}
+
+
+{% block block_navbar_right %}
+    <i class="fa fa-institution" aria-hidden="true"></i>&nbsp;&nbsp;TESTING
+{% endblock %}
+
+
+{% block block_content %}
+
+    <!-- Questions map { -->
+    {% for quest in lst_questions_map.items %}
+        <span id="qmap_{{ forloop.counter }}" class="{{ quest.1 }}" style="cursor: pointer" onclick="qmap_click({{ quest.0 }})">{{ quest.0|qnum_to_string }}</span>&nbsp;&nbsp;
+    {% endfor %}
+    <!-- Questions map } -->
+
+    <p>&nbsp;</p>
+
+    <!-- TestCard { -->
+    <ul class="nav nav-tabs z-depth-2 animated fadeIn align-items-center" style="background: #570230;" role="tablist">
+        <span style="font-size: larger; font-weight: bold; color: {{ is_test_pass_color }}"> {{ is_test_pass_message }}</span>
+        <span style="color: lightgreen">&nbsp;&nbsp;&nbsp; (right - {{ right_answer_amount }}, &nbsp;</span>
+        <span style="color: red"> wrong - {{ wrong_answer_amount }}, &nbsp;</span>
+        <span style="color: lightgray"> not answered - {{ not_answer }})</span>
+
+        <div style="position: absolute; right: 20px; color: white">
+            {% if question_number > 0 %}
+{#                <span class="{{ cur_css_class }}"> {{ question_number }} of {{ list_qna|length }} </span>#}
+                <span class="{{ lst_questions_map|index:question_number }}" style="font-size: larger"> {{ question_number|qnum_to_string }} </span>
+            {% endif %}
+        </div>
+    </ul>
+
+    <div class="tab-content card lime lighten-5 z-depth-2 animated fadeIn">
+        <div class="tab-pane fade in show active" id="panel1" role="tabpanel">
+            {% if show_question == 'yes' %}
+                {% if qna_curr.question.image %}
+                    <div class="container-flued">
+                        <div class="row align-items-center">
+                            <div class="col-9">
+                                <p class="h5" style="color: #570230;">{{ qna_curr.question.text_eng }}</p>
+                            </div>
+                            <div class="col-3"><img src="{% static 'img/q_img/' %}{{ qna_curr.question.image }}"/></div>
+                        </div>
+                    </div>
+                {% else %}
+                    <p class="h5" style="color: #570230;">{{ qna_curr.question.text_eng }}</p>
+                {% endif %}
+
+                <hr style="background: #570230;">
+
+                {% for answer in qna_curr.answers.values %}
+                    <div>
+{#                        <input type="checkbox" class="filled-in" id="{{ answer.checkbox }}" {{ answer.user_answer }}>#}
+{#                        <label for="{{ answer.checkbox }}">{{ answer.text_eng }} - {{ answer.letter }}. {{ answer.correct }}</label>#}
+
+                        {% if answer.correct == 'false' %}
+                            {% if answer.user_answer == 'checked' %}
+                                <input type="checkbox" class="filled-in checkbox-row" id="{{ answer.checkbox }}">
+                                <label style="color: red; text-decoration: line-through;" for="{{ answer.checkbox }}">{{ answer.text_eng }} - {{ answer.letter }}. {{ answer.correct }}</label>
+                            {% else %}
+                                <input style="color: green;" type="checkbox" class="filled-in" id="{{ answer.checkbox }}">
+                                <label for="{{ answer.checkbox }}">{{ answer.text_eng }} - {{ answer.letter }}. {{ answer.correct }}</label>
+                            {% endif %}
+
+                        {% elif answer.correct == 'true' %}
+                            {% if answer.user_answer == 'checked' %}
+                                <input style="color: green;" type="checkbox" class="filled-in" id="{{ answer.checkbox }}" checked="checked">
+                                <label style="color: green;" for="{{ answer.checkbox }}">{{ answer.text_eng }} - {{ answer.letter }}. {{ answer.correct }}</label>
+                            {% else %}
+                                <input style="color: green;" type="checkbox" class="filled-in" id="{{ answer.checkbox }}" checked="checked">
+                                <label for="{{ answer.checkbox }}">{{ answer.text_eng }} - {{ answer.letter }}. {{ answer.correct }}</label>
+                            {% endif %}
+                        {% endif %}
+
+                    </div>
+                {% endfor %}
+
+            {% else %}
+                <br>
+                <img class="mx-auto d-block" src="{% static 'img/img_yes_no/' %}{{ is_test_pass_image }}"/>
+                <br>
+                <p class="h5 text-center" style="color: {{ is_test_pass_color }};">{{ is_test_pass_message }}</p>
+            {% endif %}
+        </div>
+
+        <div>
+{#            <button type="button" id="btn_prev" class="btn btn-rounded" style="background: #570230;" onclick="btn_prev_click()"><i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp;&nbsp;prev</button>#}
+{#            <button type="button" id="btn_next" class="btn btn-rounded" style="background: #570230;" onclick="btn_next_click()"> next &nbsp;&nbsp; <i class="fa fa-arrow-right" aria-hidden="true"></i></button>#}
+{#            <button type="button" class="btn btn-rounded" style="background: #466e4a; position: absolute; right: 20px;" onclick="btn_endtest_click()">END TEST &nbsp;&&nbsp; CHECK</button>#}
+        </div>
+    </div>
+    <!-- TestCard } -->
+
+    <script>
+        function qmap_click(qnum) {
+            new_href = window.location.origin + '/endtest/' + qnum + '/';
+            window.location.href = new_href;
+        }
+
+    </script>
+
+{% endblock block_content %}
+
+{#["http:", "", "127.0.0.1:8000", "endtest", "1-0-0-0-0", ""] (6)#}

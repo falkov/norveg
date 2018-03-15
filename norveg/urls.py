@@ -27,5 +27,6 @@ urlpatterns = [
     path('endtest/<slug:user_answer>/', app_quiz.views.end_test, name='end-test'),
     # path('endtest/<slug:user_answer>/<str:show_question>/', app_quiz.views.end_test, name='end-test'),
     path('home/', app_main.views.home, name='home'),
+    path('', app_main.views.home, name='home'),
 ]
 

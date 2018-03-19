@@ -17,7 +17,7 @@
 
     <!-- Questions map { -->
     {% for quest in lst_questions_map.items %}
-        <span id="qmap_{{ forloop.counter }}" class="{{ quest.1 }}" style="cursor: pointer" onclick="qmap_click({{ quest.0 }})">{{ quest.0|qnum_to_string }}</span>&nbsp;&nbsp;
+        <span id="qmap_{{ forloop.counter }}" class="{{ quest.1 }}" style="margin: 3px; font-size: medium; cursor: pointer" onclick="qmap_click({{ quest.0 }})">{{ quest.0|qnum_to_string }}</span>&nbsp;&nbsp;
     {% endfor %}
     <!-- Questions map } -->
 

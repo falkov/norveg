@@ -182,8 +182,6 @@ def testing(request, new_test, question_number, user_answer=None, endtest=None):
 
     lst_questions_map[question_number] = css_class_current
 
-    print(len(lst_questions_map))
-
     return render(request, 'app_quiz/testing.html', {
         'list_qna': list_qna,
         'question_number': question_number,

@@ -21,8 +21,8 @@
 {% block block_content %}
 
     <!-- Questions map { -->
-    {% for quest in lst_questions_map.items %}
-        <span id="qmap_{{ forloop.counter }}" class="{{ quest.1 }}" style="margin: 3px; font-size: medium; cursor: pointer" onclick="qmap_click({{ quest.0 }})">{{ quest.0|qnum_to_string }}</span>&nbsp;&nbsp;
+    {% for quest in lst_questions_map %}
+        <span id="qmap_{{ forloop.counter }}" class="{{ quest }}" style="margin: 3px; font-size: medium; cursor: pointer" onclick="qmap_click({{ forloop.counter }})">{{ forloop.counter|qnum_to_string }}</span>&nbsp;&nbsp;
     {% endfor %}
     <!-- Questions map } -->
 
@@ -35,28 +35,28 @@
         <span style="color: white">TEST</span>
 
         <div style="position: absolute; right: 20px; color: white">
-            {{ question_number }} of {{ list_qna|length }}  - sec. {{ qna_curr.question.section }},  # {{ qna_curr.question.number }}
+            {{ question_number }} of {{ q_amount }}  - sec. {{ test_question.section }},  # {{ test_question.q_num }}
         </div>
     </ul>
 
     <div class="tab-content card lime lighten-5 z-depth-2 animated fadeIn">
         <div class="tab-pane fade in show active" id="panel1" role="tabpanel">
-            {% if qna_curr.question.image %}
+            {% if test_question.image %}
                 <div class="container-flued">
                     <div class="row align-items-center">
                         <div class="col-9">
-                            <p class="h5" style="color: #570230;">{{ qna_curr.question.text_eng }}</p>
+                            <p class="h5" style="color: #570230;">{{ test_question.text_eng }}</p>
                         </div>
-                        <div class="col-3"><img src="{% static 'img/q_img/' %}{{ qna_curr.question.image }}"/></div>
+                        <div class="col-3"><img src="{% static 'img/q_img/' %}{{ test_question.image }}"/></div>
                     </div>
                 </div>
             {% else %}
-                <p class="h5" style="color: #570230;">{{ qna_curr.question.text_eng }}</p>
+                <p class="h5" style="color: #570230;">{{ test_question.text_eng }}</p>
             {% endif %}
 
             <hr style="background: #570230;">
 
-            {% for answer in qna_curr.answers.values %}
+            {% for answer in test_answers.values %}
                 <div>
                     <input type="checkbox" class="filled-in" id="{{ answer.checkbox }}" {{ answer.user_answer }}>
                     <label for="{{ answer.checkbox }}">{{ answer.text_eng }} - {{ answer.letter }}. {{ answer.correct }}</label>
@@ -83,9 +83,7 @@
             {% endif %}
 
             var question_number = {{ question_number }};
-            var questions_amount = {{ list_qna|length }};
-
-            console.log({{ question_number }});
+            var questions_amount = {{ q_amount }};
 
             if(question_number < 2) { jQuery('#btn_prev').prop('disabled', true); }
             if(question_number >= questions_amount) { jQuery('#btn_next').prop('disabled', true); }
@@ -97,7 +95,7 @@
             var href_split_array = window.location.href.split('/');
             var new_href = "";
 
-            {% for answer in qna_curr.answers.values %}
+            {% for answer in test_answers.values %}
                 if(jQuery('#{{ answer.checkbox }}').prop('checked')) {
                     user_answer += '-1'
                 }
@@ -149,5 +147,3 @@
     </script>
 
 {% endblock block_content %}
-
-

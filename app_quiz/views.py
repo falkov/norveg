@@ -1,10 +1,8 @@
 from django.shortcuts import render
 from app_quiz.models import Section, Question, Answer
-import random
-import pprint
+from app_quiz.models import TestQuestion, TestAnswer
 
-list_qna = []
-lst_questions_map = {}
+import random
 
 css_class_current = 'badge badge-pill grey darken-2'
 css_class_no_answer = 'badge badge-pill grey'
@@ -40,15 +38,6 @@ section_question = {
     '25': {'from': 234, 'to': 239, 'amount_for_test': 1},
     '26': {'from': 240, 'to': 250, 'amount_for_test': 2}
 }
-
-
-class QnA:
-    def __init__(self, dict_question, dict_answers):
-        self.question = dict_question
-        self.answers = dict_answers
-
-    def __repr__(self):
-        return f"question={self.question}\nanswers={self.answers}"
 
 
 def learning(request, section_number, question_num_in_section):
@@ -94,12 +83,12 @@ def learning(request, section_number, question_num_in_section):
         'right_img': 'yes_' + str(random.choice(range(1, 9))) + '.gif',
         'wrong_msg': random.choice(['NO! YOU ARE WRONG!', 'WRONG!', 'WRONG ANSWER!', 'INCORRECT ANSWER!', 'THAT IS WRONG!']),
         'wrong_img': 'no_' + str(random.choice(range(1, 10))) + '.gif',
-        # 'navbar_right': 'привет, falkov!',
     })
 
 
 def create_test():
-    list_qna.clear()
+    TestQuestion.objects.all().delete()
+    TestAnswer.objects.all().delete()
 
     sec_rand = list(range(1, 27))
     random.shuffle(sec_rand)
@@ -107,109 +96,102 @@ def create_test():
     for section_num in sec_rand:
         am_for_test = section_question[str(section_num)]['amount_for_test']
 
-        ls_questions = random.sample(list(Question.objects.filter(section__exact=str(section_num)).values_list
-                        ('id', 'number', 'section', 'text_eng', 'text_rus', 'text_nor', 'image')), am_for_test)
+        ls_questions = random.sample(list(Question.objects.filter(section__exact=
+            str(section_num)).values_list('id', 'number', 'section', 'text_eng', 'text_rus', 'text_nor', 'image')), am_for_test)
 
         for quest in ls_questions:
-            dict_question = {}
+            TestQuestion.objects.create(q_num=quest[1], section=quest[2], text_eng=quest[3], text_rus=quest[4],
+                text_nor=quest[5], image=quest[6], css_class=css_class_no_answer)
 
-            dict_question['id'] = quest[0]
-            dict_question['number'] = quest[1]
-            dict_question['section'] = quest[2]
-            dict_question['text_eng'] = quest[3]
-            dict_question['text_rus'] = quest[4]
-            dict_question['text_nor'] = quest[5]
-            dict_question['image'] = quest[6]
-
-            ls_answers = list(Answer.objects.filter(question=quest[0]).values_list
-                ('id', 'question', 'letter', 'text_eng', 'text_rus', 'text_nor', 'correct'))
+            ls_answers = list(Answer.objects.filter(question=quest[0]).values_list(
+                'id', 'question', 'letter', 'text_eng', 'text_rus', 'text_nor', 'correct'))
 
             random.shuffle(ls_answers)
 
-            dict_answers = {}
             a_num = 0
 
             for answer in ls_answers:
                 a_num += 1
 
-                dict_answers.update({
-                    str(a_num): {
-                        'id': answer[0],
-                        'question': answer[1],
-                        'letter': answer[2],
-                        'text_eng': answer[3],
-                        'text_rus': answer[4],
-                        'text_nor': answer[5],
-                        'correct': answer[6],
-                        'user_answer': '',
-                        'checkbox': 'checkbox_' + str(a_num),
-                    }
-                })
-
-            qna = QnA(dict_question, dict_answers)
-            list_qna.append(qna)
-
-
-def create_questions_map():
-    lst_questions_map.clear()
-
-    for num, quest in enumerate(list_qna):
-        lst_questions_map[num+1] = css_class_no_answer
+                TestAnswer.objects.create(q_num=answer[1], letter=answer[2], text_eng=answer[3], text_rus=answer[4],
+                    text_nor=answer[5], correct=answer[6], user_answer='', checkbox='checkbox_' + str(a_num))
 
 
 def user_answer_processing(user_answer):
     arr_split_user_answer = user_answer.split('-')
-    qn = int(arr_split_user_answer[0]) - 1
-    lst_questions_map[qn + 1] = css_class_no_answer
+    q_order_num = int(arr_split_user_answer[0]) - 1
+    qnum = TestQuestion.objects.all()[q_order_num].q_num
+
+    is_answer = False
 
     for loop in range(1, len(arr_split_user_answer)):
-        list_qna[qn].answers[str(loop)]['user_answer'] = arr_split_user_answer[loop]
+        curr_answer = TestAnswer.objects.filter(q_num__exact=qnum)[loop - 1]
 
         if arr_split_user_answer[loop] == '1':
-            list_qna[qn].answers[str(loop)]['user_answer'] = 'checked'
-            lst_questions_map[qn + 1] = css_class_is_answer
+            is_answer = True
+
+            curr_answer.user_answer = 'checked'
+            curr_answer.save()
         else:
-            list_qna[qn].answers[str(loop)]['user_answer'] = ''
+            curr_answer.user_answer = ''
+            curr_answer.save()
+
+    curr_question = TestQuestion.objects.all()[q_order_num]
+
+    if is_answer:
+        curr_question.css_class = css_class_is_answer
+        curr_question.save()
+    else:
+        curr_question.css_class = css_class_no_answer
+        curr_question.save()
 
 
-def testing(request, new_test, question_number, user_answer=None, endtest=None):
-    if new_test == 'yes' or len(list_qna) == 0:
+def testing(request, new_test, question_number, user_answer=None):
+    if new_test == 'yes' or TestQuestion.objects.all().count() == 0:
         create_test()
-        create_questions_map()
 
     if user_answer:
         user_answer_processing(user_answer)
 
-    lst_questions_map[question_number] = css_class_current
+    q_curr = TestQuestion.objects.all()[question_number-1]
+    q_curr.css_class = css_class_current
+    q_curr.save()
 
     return render(request, 'app_quiz/testing.html', {
-        'list_qna': list_qna,
+        'q_amount': TestQuestion.objects.all().count(),
+        'test_question': TestQuestion.objects.all()[question_number-1],
+        'test_answers': TestAnswer.objects.filter(q_num=TestQuestion.objects.all()[question_number-1].q_num),
         'question_number': question_number,
-        'qna_curr': list_qna[question_number-1],
-        'lst_questions_map': lst_questions_map,
+        'lst_questions_map': list(TestQuestion.objects.all().values_list('css_class', flat=True)),
         'new_test': new_test
     })
 
 
 def set_endtest_qmap():
-    for question_loop in range(len(list_qna)):
+    for question_loop in range(TestQuestion.objects.all().count()):
         is_answer_temp = False
         is_right_answer_temp = True
+        curr_question = TestQuestion.objects.all()[question_loop]
+        qnum = curr_question.q_num
 
-        for answer_loop in range(len(list_qna[question_loop].answers)):
-            if list_qna[question_loop].answers[str(answer_loop + 1)]['user_answer'] == 'checked':
+        answers_amount = TestAnswer.objects.filter(q_num__exact=qnum).count()
+
+        for answer_loop in range(answers_amount):
+            if TestAnswer.objects.filter(q_num__exact=qnum)[answer_loop].user_answer == 'checked':
                 is_answer_temp = True
 
-                if list_qna[question_loop].answers[str(answer_loop + 1)]['correct'] != 'true':
+                if TestAnswer.objects.filter(q_num__exact=qnum)[answer_loop].correct != 'true':
                     is_right_answer_temp = False
 
         if is_answer_temp:
             if is_right_answer_temp:
-                lst_questions_map[question_loop + 1] = css_class_right_answer
+                curr_question.css_class = css_class_right_answer
             else:
-                lst_questions_map[question_loop + 1] = css_class_wrong_answer
+                curr_question.css_class = css_class_wrong_answer
         else:
-            lst_questions_map[question_loop + 1] = css_class_no_answer
+            curr_question.css_class = css_class_no_answer
+
+        curr_question.save()
 
 
 def is_test_pass():
@@ -217,10 +199,12 @@ def is_test_pass():
     wrong_answer_amount = 0
     is_test_pass_message = ''
 
-    for loop in range(1, len(lst_questions_map)):
-        if lst_questions_map[loop] == css_class_right_answer:
+    for question_loop in range(TestQuestion.objects.all().count()):
+        curr_question = TestQuestion.objects.all()[question_loop]
+
+        if curr_question.css_class == css_class_right_answer:
             right_answer_amount += 1
-        elif lst_questions_map[loop] == css_class_wrong_answer:
+        elif curr_question.css_class == css_class_wrong_answer:
             wrong_answer_amount += 1
 
     if right_answer_amount > 37:
@@ -238,33 +222,28 @@ def is_test_pass():
 
 
 def end_test(request, user_answer):
-    # user_answer = 32-0-1-0-1  или  1..45
-    if len(user_answer) > 2:
+    if len(user_answer) > 2:        # user_answer = 32-0-1-0-1
         user_answer_processing(user_answer)
         set_endtest_qmap()
         show_question = 'no'
-        question_number = 0
+        question_number = 1
         right_answer_amount, wrong_answer_amount, not_answer, is_test_pass_message, is_test_pass_color, is_test_pass_image = is_test_pass()
 
-    else:
+    else:                           # user_answer = 1..45
         show_question = 'yes'
         question_number = int(user_answer)
         right_answer_amount, wrong_answer_amount, not_answer, is_test_pass_message, is_test_pass_color, is_test_pass_image = is_test_pass()
 
-
     return render(request, 'app_quiz/end_test.html', {
-        'list_qna': list_qna,
-        'lst_questions_map': lst_questions_map,
+        'lst_questions_map': list(TestQuestion.objects.all().values_list('css_class', flat=True)),
         'show_question': show_question,
-        'qna_curr': list_qna[question_number - 1],
+        'test_question': TestQuestion.objects.all()[question_number-1],
+        'test_answers': TestAnswer.objects.filter(q_num=TestQuestion.objects.all()[question_number-1].q_num),
         'question_number': question_number,
         'right_answer_amount': right_answer_amount,
         'wrong_answer_amount': wrong_answer_amount,
         'not_answer': not_answer,
         'is_test_pass_message': is_test_pass_message,
         'is_test_pass_color': is_test_pass_color,
-        'is_test_pass_image': is_test_pass_image
-
-        # 'cur_css_class': lst_questions_map[question_number]
-
+        'is_test_pass_image': is_test_pass_image,
     })

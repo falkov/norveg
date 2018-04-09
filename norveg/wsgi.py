@@ -16,5 +16,5 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "norveg.settings")
 application = get_wsgi_application()
 
 # Use whitenoise package to serv static files on heroku
-from whitenoise.django import DjangoWhiteNoise
-Application = DjangoWhiteNoise(application)
+# from whitenoise.django import DjangoWhiteNoise
+# Application = DjangoWhiteNoise(application)

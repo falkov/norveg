@@ -4,6 +4,16 @@ from app_quiz.models import TestQuestion, TestAnswer
 
 import random
 
+import os
+import logging
+
+DO_LOGGING = True
+
+if DO_LOGGING:
+    logging.basicConfig(format="%(asctime)s  %(filename)s:%(lineno)d  %(message)s",
+                        datefmt="%Y-%m-%d  %H:%M.%S", level=logging.DEBUG, filename='norveg.log')
+
+
 css_class_current = 'badge badge-pill grey darken-2'
 css_class_no_answer = 'badge badge-pill grey'
 css_class_is_answer = 'badge badge-pill light-blue darken-1'
@@ -49,6 +59,9 @@ def learning(request, section_number, question_num_in_section):
     question_pk = Question.objects.filter(number=question_num_real)[0].id
     question_image = Question.objects.all()[question_num_real-1].image
 
+    if DO_LOGGING:
+        logging.info(f' LEARN ({request.META["REMOTE_ADDR"]}) sec.{section_number}  #{question_num_in_section} (of {question_amount})')
+
     answers = list(Answer.objects.filter(question=question_pk).values_list('text_eng', 'text_rus', 'text_nor', 'letter', 'correct'))
     random.shuffle(answers)
 
@@ -87,6 +100,9 @@ def learning(request, section_number, question_num_in_section):
 
 
 def create_test():
+    if DO_LOGGING:
+        logging.info(f' ---------- CREATE NEW TEST ----------')
+
     TestQuestion.objects.all().delete()
     TestAnswer.objects.all().delete()
 
@@ -156,6 +172,9 @@ def testing(request, new_test, question_number, user_answer=None):
     q_curr = TestQuestion.objects.all()[question_number-1]
     q_curr.css_class = css_class_current
     q_curr.save()
+
+    if DO_LOGGING:
+        logging.info(f' TEST {request.META["REMOTE_ADDR"]}, #{question_number}')
 
     return render(request, 'app_quiz/testing.html', {
         'q_amount': TestQuestion.objects.all().count(),
@@ -233,6 +252,9 @@ def end_test(request, user_answer):
         show_question = 'yes'
         question_number = int(user_answer)
         right_answer_amount, wrong_answer_amount, not_answer, is_test_pass_message, is_test_pass_color, is_test_pass_image = is_test_pass()
+
+    if DO_LOGGING:
+        logging.info(f' ===== END TEST ({request.META["REMOTE_ADDR"]}) = ri.{right_answer_amount} wr.{wrong_answer_amount} na.{not_answer} {is_test_pass_message}')
 
     return render(request, 'app_quiz/end_test.html', {
         'lst_questions_map': list(TestQuestion.objects.all().values_list('css_class', flat=True)),

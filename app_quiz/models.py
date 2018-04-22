@@ -36,6 +36,7 @@ class Answer(models.Model):
 
 
 class TestQuestion(models.Model):
+    q_num_in_test = models.IntegerField(default=0)
     q_num = models.IntegerField(default=0)
     section = models.IntegerField(default=0)
     text_eng = models.CharField(max_length=300, default="")
@@ -46,6 +47,9 @@ class TestQuestion(models.Model):
 
     def __str__(self):
         return self.text_eng
+
+    def falkov_proba(self):
+        pass
 
 
 class TestAnswer(models.Model):

@@ -1,1 +1,1973 @@
 
+2018-04-21  13:13.53  base.py:93  Not Found: /apple-touch-icon-precomposed.png
+2018-04-21  13:13.53  base.py:93  Not Found: /apple-touch-icon.png
+2018-04-21  13:13.58  exception.py:118  Internal Server Error: /learning/4/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 54, in learning
+    section_text = Section.objects.filter(pk=section_number)[0].text_eng
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/query.py", line 307, in __getitem__
+    return qs._result_cache[0]
+IndexError: list index out of range
+2018-04-21  13:13.58  base.py:93  Not Found: /favicon.ico
+2018-04-21  13:14.06  exception.py:118  Internal Server Error: /learning/1/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 54, in learning
+    section_text = Section.objects.filter(pk=section_number)[0].text_eng
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/query.py", line 307, in __getitem__
+    return qs._result_cache[0]
+IndexError: list index out of range
+2018-04-21  13:14.12  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  13:14.12  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 167, in testing
+    create_test()
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 116, in create_test
+    str(section_num)).values_list('id', 'number', 'section', 'text_eng', 'text_rus', 'text_nor', 'image')), am_for_test)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/random.py", line 318, in sample
+    raise ValueError("Sample larger than population or is negative")
+ValueError: Sample larger than population or is negative
+2018-04-21  13:15.42  views.py:63   LEARN (127.0.0.1) sec.4  #1 (of 20)
+2018-04-21  13:15.47  views.py:63   LEARN (127.0.0.1) sec.1  #1 (of 10)
+2018-04-21  13:15.56  views.py:63   LEARN (127.0.0.1) sec.8  #1 (of 5)
+2018-04-21  13:16.00  views.py:63   LEARN (127.0.0.1) sec.8  #2 (of 5)
+2018-04-21  13:16.01  views.py:63   LEARN (127.0.0.1) sec.8  #3 (of 5)
+2018-04-21  13:16.11  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  13:16.12  views.py:177   TEST 127.0.0.1, #1
+2018-04-21  13:16.18  views.py:177   TEST 127.0.0.1, #2
+2018-04-21  13:16.22  views.py:177   TEST 127.0.0.1, #3
+2018-04-21  13:16.26  views.py:177   TEST 127.0.0.1, #4
+2018-04-21  13:16.31  views.py:177   TEST 127.0.0.1, #1
+2018-04-21  13:16.33  views.py:177   TEST 127.0.0.1, #44
+2018-04-21  13:16.37  views.py:177   TEST 127.0.0.1, #28
+2018-04-21  13:16.41  views.py:177   TEST 127.0.0.1, #1
+2018-04-21  13:17.11  views.py:177   TEST 127.0.0.1, #6
+2018-04-21  13:17.49  views.py:177   TEST 127.0.0.1, #28
+2018-04-21  13:27.38  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  13:27.39  views.py:180   TEST 127.0.0.1, #1
+2018-04-21  13:27.50  views.py:180   TEST 127.0.0.1, #2
+2018-04-21  13:27.53  views.py:180   TEST 127.0.0.1, #3
+2018-04-21  13:27.56  views.py:180   TEST 127.0.0.1, #44
+2018-04-21  13:28.45  views.py:180   TEST 127.0.0.1, #44
+2018-04-21  13:28.49  views.py:180   TEST 127.0.0.1, #45
+2018-04-21  13:28.54  views.py:180   TEST 127.0.0.1, #44
+2018-04-21  13:28.59  views.py:180   TEST 127.0.0.1, #43
+2018-04-21  13:29.14  views.py:180   TEST 127.0.0.1, #1
+2018-04-21  13:29.19  views.py:180   TEST 127.0.0.1, #1
+2018-04-21  13:29.31  views.py:180   TEST 127.0.0.1, #1
+2018-04-21  13:29.36  views.py:180   TEST 127.0.0.1, #1
+2018-04-21  13:29.43  views.py:180   TEST 127.0.0.1, #2
+2018-04-21  13:29.51  views.py:180   TEST 127.0.0.1, #2
+2018-04-21  13:29.54  views.py:180   TEST 127.0.0.1, #1
+2018-04-21  13:29.59  views.py:180   TEST 127.0.0.1, #1
+2018-04-21  13:31.18  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  13:31.18  views.py:184   TEST 127.0.0.1, #1
+2018-04-21  13:31.29  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  13:31.31  views.py:184   TEST 127.0.0.1, #1
+2018-04-21  13:32.58  views.py:184   TEST 127.0.0.1, #2
+2018-04-21  13:33.06  views.py:184   TEST 127.0.0.1, #3
+2018-04-21  13:33.11  views.py:184   TEST 127.0.0.1, #4
+2018-04-21  13:33.16  views.py:184   TEST 127.0.0.1, #5
+2018-04-21  13:33.21  views.py:184   TEST 127.0.0.1, #1
+2018-04-21  13:33.44  views.py:184   TEST 127.0.0.1, #1
+2018-04-21  13:33.51  views.py:184   TEST 127.0.0.1, #1
+2018-04-21  13:33.54  views.py:184   TEST 127.0.0.1, #1
+2018-04-21  13:33.58  views.py:184   TEST 127.0.0.1, #1
+2018-04-21  13:34.04  views.py:184   TEST 127.0.0.1, #1
+2018-04-21  13:34.06  views.py:184   TEST 127.0.0.1, #1
+2018-04-21  13:34.08  views.py:184   TEST 127.0.0.1, #1
+2018-04-21  13:34.10  views.py:184   TEST 127.0.0.1, #2
+2018-04-21  13:34.27  views.py:184   TEST 127.0.0.1, #2
+2018-04-21  13:36.19  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  13:36.20  views.py:181   TEST 127.0.0.1, #1
+2018-04-21  13:36.29  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  13:36.29  views.py:181   TEST 127.0.0.1, #1
+2018-04-21  13:36.58  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  13:36.59  views.py:180   TEST 127.0.0.1, #1
+2018-04-21  13:37.49  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  13:37.50  views.py:179   TEST 127.0.0.1, #1
+2018-04-21  13:38.48  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  13:38.49  views.py:180   TEST 127.0.0.1, #1
+2018-04-21  13:39.12  views.py:180   TEST 127.0.0.1, #1
+2018-04-21  13:39.46  views.py:180   TEST 127.0.0.1, #2
+2018-04-21  13:40.13  views.py:180   TEST 127.0.0.1, #5
+2018-04-21  13:42.39  exception.py:118  Internal Server Error: /testing/no/41/5-0-0-0-0/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 172, in testing
+    print('1'+list(TestQuestion.objects.all().values_list('q_num')))
+TypeError: must be str, not list
+2018-04-21  13:42.58  views.py:183   TEST 127.0.0.1, #2
+2018-04-21  13:43.45  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  13:43.45  views.py:183   TEST 127.0.0.1, #1
+2018-04-21  13:44.28  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  13:44.28  views.py:183   TEST 127.0.0.1, #1
+2018-04-21  13:45.42  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  13:45.42  views.py:186   TEST 127.0.0.1, #1
+2018-04-21  13:48.38  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  13:48.39  views.py:186   TEST 127.0.0.1, #1
+2018-04-21  13:48.49  views.py:186   TEST 127.0.0.1, #2
+2018-04-21  13:50.15  views.py:186   TEST 127.0.0.1, #1
+2018-04-21  13:50.55  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  13:50.56  views.py:186   TEST 127.0.0.1, #1
+2018-04-21  13:51.18  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  13:51.18  views.py:186   TEST 127.0.0.1, #1
+2018-04-21  13:51.35  views.py:186   TEST 127.0.0.1, #2
+2018-04-21  13:51.35  views.py:186   TEST 127.0.0.1, #2
+2018-04-21  13:51.59  views.py:186   TEST 127.0.0.1, #43
+2018-04-21  13:52.19  views.py:186   TEST 127.0.0.1, #44
+2018-04-21  13:53.37  views.py:186   TEST 127.0.0.1, #45
+2018-04-21  13:54.34  views.py:186   TEST 127.0.0.1, #2
+2018-04-21  13:55.51  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  13:55.51  views.py:186   TEST 127.0.0.1, #1
+2018-04-21  13:56.10  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  13:56.11  views.py:186   TEST 127.0.0.1, #1
+2018-04-21  13:56.46  views.py:186   TEST 127.0.0.1, #2
+2018-04-21  13:56.46  views.py:186   TEST 127.0.0.1, #2
+2018-04-21  13:57.52  views.py:186   TEST 127.0.0.1, #1
+2018-04-21  14:06.46  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  14:06.46  views.py:188   TEST 127.0.0.1, #1
+2018-04-21  14:06.52  views.py:188   TEST 127.0.0.1, #2
+2018-04-21  14:06.52  views.py:188   TEST 127.0.0.1, #2
+2018-04-21  14:06.55  views.py:188   TEST 127.0.0.1, #3
+2018-04-21  14:06.59  views.py:188   TEST 127.0.0.1, #5
+2018-04-21  14:07.01  views.py:188   TEST 127.0.0.1, #6
+2018-04-21  14:10.02  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  14:10.02  views.py:192   TEST 127.0.0.1, #1
+2018-04-21  14:10.26  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  14:10.26  views.py:192   TEST 127.0.0.1, #1
+2018-04-21  14:25.01  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  14:25.01  views.py:192   TEST 127.0.0.1, #1
+2018-04-21  14:25.09  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  14:25.10  views.py:192   TEST 127.0.0.1, #1
+2018-04-21  14:25.55  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  14:25.56  views.py:192   TEST 127.0.0.1, #1
+2018-04-21  14:26.04  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  14:26.04  views.py:192   TEST 127.0.0.1, #1
+2018-04-21  14:28.05  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  14:28.06  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 190, in testing
+    q_curr.s
+AttributeError: 'TestQuestion' object has no attribute 's'
+2018-04-21  14:28.36  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  14:28.38  views.py:192   TEST 127.0.0.1, #1
+2018-04-21  14:29.16  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  14:29.17  views.py:192   TEST 127.0.0.1, #1
+2018-04-21  14:29.47  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  14:29.47  views.py:192   TEST 127.0.0.1, #1
+2018-04-21  14:30.16  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  14:30.17  views.py:192   TEST 127.0.0.1, #1
+2018-04-21  14:30.50  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  14:30.51  views.py:192   TEST 127.0.0.1, #1
+2018-04-21  14:31.27  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  14:31.28  views.py:191   TEST 127.0.0.1, #1
+2018-04-21  14:32.05  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  14:32.06  views.py:191   TEST 127.0.0.1, #1
+2018-04-21  14:33.06  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  14:33.06  views.py:189   TEST 127.0.0.1, #1
+2018-04-21  14:33.31  views.py:189   TEST 127.0.0.1, #2
+2018-04-21  14:34.49  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  14:34.50  views.py:188   TEST 127.0.0.1, #1
+2018-04-21  14:35.23  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  14:35.23  views.py:187   TEST 127.0.0.1, #1
+2018-04-21  14:35.56  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  14:35.56  views.py:187   TEST 127.0.0.1, #1
+2018-04-21  14:36.34  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  14:36.34  views.py:187   TEST 127.0.0.1, #1
+2018-04-21  14:36.43  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  14:36.44  views.py:187   TEST 127.0.0.1, #1
+2018-04-21  14:36.58  views.py:187   TEST 127.0.0.1, #2
+2018-04-21  14:36.58  views.py:187   TEST 127.0.0.1, #2
+2018-04-21  14:37.35  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  14:37.35  views.py:187   TEST 127.0.0.1, #1
+2018-04-21  14:37.55  views.py:187   TEST 127.0.0.1, #1
+2018-04-21  14:38.26  views.py:187   TEST 127.0.0.1, #2
+2018-04-21  14:39.41  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  14:39.42  views.py:188   TEST 127.0.0.1, #1
+2018-04-21  14:39.53  views.py:188   TEST 127.0.0.1, #1
+2018-04-21  14:40.02  views.py:188   TEST 127.0.0.1, #2
+2018-04-21  14:40.12  views.py:188   TEST 127.0.0.1, #1
+2018-04-21  14:40.26  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  14:40.26  views.py:188   TEST 127.0.0.1, #1
+2018-04-21  14:40.33  views.py:188   TEST 127.0.0.1, #1
+2018-04-21  14:40.33  views.py:188   TEST 127.0.0.1, #1
+2018-04-21  14:40.37  views.py:188   TEST 127.0.0.1, #2
+2018-04-21  14:40.49  views.py:188   TEST 127.0.0.1, #2
+2018-04-21  14:40.53  views.py:188   TEST 127.0.0.1, #1
+2018-04-21  14:41.01  views.py:188   TEST 127.0.0.1, #45
+2018-04-21  14:42.29  views.py:188   TEST 127.0.0.1, #44
+2018-04-21  14:42.36  views.py:188   TEST 127.0.0.1, #45
+2018-04-21  14:52.26  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  14:52.26  views.py:188   TEST 127.0.0.1, #1
+2018-04-21  14:53.35  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  14:53.35  views.py:187   TEST 127.0.0.1, #1
+2018-04-21  14:54.28  views.py:187   TEST 127.0.0.1, #1
+2018-04-21  14:54.43  views.py:187   TEST 127.0.0.1, #2
+2018-04-21  14:55.00  views.py:187   TEST 127.0.0.1, #2
+2018-04-21  14:55.08  views.py:187   TEST 127.0.0.1, #1
+2018-04-21  14:58.50  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  15:00.58  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  15:02.26  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  15:04.50  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  15:05.07  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  15:05.28  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  15:05.38  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  15:05.46  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  15:05.54  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  15:06.00  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  15:06.41  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  15:10.33  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  15:11.01  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  15:11.26  views.py:63   LEARN (127.0.0.1) sec.2  #1 (of 25)
+2018-04-21  15:11.29  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  15:12.05  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  15:15.21  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  15:16.33  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  15:16.52  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  15:18.55  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  15:36.51  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  15:36.52  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 188, in testing
+    q_curr.save(update_fields='css_class')
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/base.py", line 715, in save
+    % ', '.join(non_model_fields))
+ValueError: The following fields do not exist in this model or are m2m fields: l, a, _, s, c
+2018-04-21  15:38.18  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  15:38.19  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 188, in testing
+    q_curr.save(update_fields="css_class")
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/base.py", line 715, in save
+    % ', '.join(non_model_fields))
+ValueError: The following fields do not exist in this model or are m2m fields: l, c, a, s, _
+2018-04-21  15:38.56  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  15:38.57  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 188, in testing
+    q_curr.update()
+AttributeError: 'TestQuestion' object has no attribute 'update'
+2018-04-21  15:43.23  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  15:43.32  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  15:55.59  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  15:56.21  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  15:56.35  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  15:58.12  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  16:02.58  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  16:02.58  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 177, in testing
+    create_test()
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 107, in create_test
+    TestQuestion.delete()
+TypeError: delete() missing 1 required positional argument: 'self'
+2018-04-21  16:04.36  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  16:04.47  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  16:14.42  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  16:14.42  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 177, in testing
+    create_test()
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 107, in create_test
+    TestQuestion.clean()
+TypeError: clean() missing 1 required positional argument: 'self'
+2018-04-21  16:25.05  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  16:39.31  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  16:40.51  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  16:40.58  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  16:52.53  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  17:11.59  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  17:12.32  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  17:14.19  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  17:15.53  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  17:18.47  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  17:19.46  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  17:20.37  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  17:20.51  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  17:21.04  views.py:104   ---------- CREATE NEW TEST ----------
+2018-04-21  17:40.30  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  17:44.19  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  17:44.20  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 184, in testing
+    q_curr = TestQuestion.objects.filter(q_num__exact=lst_test_questions[question_number-1])
+IndexError: tuple index out of range
+2018-04-21  17:46.17  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  17:46.17  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 184, in testing
+    q_curr = TestQuestion.objects.filter(q_num__exact=lst_test_questions[question_number-1])
+IndexError: list index out of range
+2018-04-21  17:47.03  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  17:47.03  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 184, in testing
+    q_curr = TestQuestion.objects.filter(q_num__exact=lst_test_questions[question_number])
+IndexError: list index out of range
+2018-04-21  17:48.26  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  17:48.26  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 184, in testing
+    q_curr = TestQuestion.objects.filter(q_num__exact=lst_test_questions[question_number-1]).values_list('q_num')
+IndexError: list index out of range
+2018-04-21  17:51.22  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  17:51.23  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 184, in testing
+    q_num = TestQuestion.objects.filter(q_num__exact=lst_test_questions[question_number-1]).values_list('q_num')
+IndexError: list index out of range
+2018-04-21  17:52.49  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  17:52.50  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 183, in testing
+    print(lst_test_questions[question_number-1])
+IndexError: list index out of range
+2018-04-21  17:53.36  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  17:53.36  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 183, in testing
+    print(lst_test_questions[1])
+IndexError: list index out of range
+2018-04-21  17:55.23  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  17:56.18  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  17:56.18  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 185, in testing
+    q_num = TestQuestion.objects.filter(q_num__exact=lst_test_questions[question_number-1]).values_list('q_num')
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/lookups.py", line 68, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 1826, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'tuple'
+2018-04-21  17:58.33  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  17:58.34  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 186, in testing
+    q_num = TestQuestion.objects.filter(q_num__exact=lst_test_questions[question_number-1]).values_list('q_num')
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/lookups.py", line 68, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 1826, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'tuple'
+2018-04-21  17:59.32  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  17:59.32  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 186, in testing
+    q_num = TestQuestion.objects.filter(q_num__exact=lst_test_questions[question_number-1]).values_list('q_num')
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/lookups.py", line 68, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 1826, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'tuple'
+2018-04-21  18:02.54  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:02.54  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 186, in testing
+    q_num = TestQuestion.objects.filter(q_num__exact=lst_test_questions[question_number-1]).values_list('q_num')
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/lookups.py", line 68, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 1826, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'tuple'
+2018-04-21  18:06.34  views.py:290   ===== END TEST (127.0.0.1) = ri.0 wr.0 na.45  - THE TEST IS FAILED! - 
+2018-04-21  18:08.40  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:08.41  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 186, in testing
+    q_num = TestQuestion.objects.filter(q_num__exact=lst_test_questions[question_number-1]).values_list('q_num')
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/lookups.py", line 68, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 1826, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'tuple'
+2018-04-21  18:09.59  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:09.59  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 186, in testing
+    q_num = TestQuestion.objects.filter(q_num__exact=lst_test_questions[question_number-1]).values_list('q_num')
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/lookups.py", line 68, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 1826, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'tuple'
+2018-04-21  18:17.10  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:17.10  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 187, in testing
+    q_num = TestQuestion.objects.filter(q_num__exact=lst_test_questions[question_number-1]).values_list('q_num')
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/lookups.py", line 68, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 1826, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'tuple'
+2018-04-21  18:18.11  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:18.11  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 187, in testing
+    q_num = TestQuestion.objects.filter(q_num__exact=lst_test_questions[question_number-1]).values_list('q_num')
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/lookups.py", line 68, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 1826, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'tuple'
+2018-04-21  18:19.01  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:19.02  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 187, in testing
+    q_num = TestQuestion.objects.filter(q_num__exact=lst_test_questions[question_number-1]).values_list('q_num')
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/lookups.py", line 68, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 1826, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'tuple'
+2018-04-21  18:19.46  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:19.46  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 187, in testing
+    q_num = TestQuestion.objects.filter(q_num__exact=lst_test_questions[question_number-1]).values_list('q_num')
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/lookups.py", line 68, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 1826, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'tuple'
+2018-04-21  18:21.39  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:21.39  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 180, in testing
+    create_test()
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 140, in create_test
+    lst_test_questions = [qnum.lstrip() for qnum in test_questions]
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 140, in <listcomp>
+    lst_test_questions = [qnum.lstrip() for qnum in test_questions]
+AttributeError: 'tuple' object has no attribute 'lstrip'
+2018-04-21  18:22.45  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:22.45  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 186, in testing
+    print('>>>>>>>>>>>', lst_test_questions[question_number-1])
+TypeError: 'generator' object is not subscriptable
+2018-04-21  18:23.34  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:23.34  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 186, in testing
+    print('>>>>>>>>>>>', lst_test_questions[question_number-1])
+TypeError: 'generator' object is not subscriptable
+2018-04-21  18:23.58  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:23.58  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 186, in testing
+    print('>>>>>>>>>>>', lst_test_questions[question_number-1])
+TypeError: 'generator' object is not subscriptable
+2018-04-21  18:24.27  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:24.28  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 187, in testing
+    q_num = TestQuestion.objects.filter(q_num__exact=lst_test_questions[question_number-1]).values_list('q_num')
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/lookups.py", line 68, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 1826, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: '(231,)'
+2018-04-21  18:25.21  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:25.21  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 187, in testing
+    q_num = TestQuestion.objects.filter(q_num__exact=lst_test_questions[question_number-1]).values_list('q_num')
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/lookups.py", line 68, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 1826, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'tuple'
+2018-04-21  18:25.53  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:25.53  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 186, in testing
+    print('>>>>>>>>>>>', lst_test_questions[question_number-1])
+TypeError: 'generator' object is not subscriptable
+2018-04-21  18:29.25  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:29.26  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 189, in testing
+    print('>>>>>>>>>>>', lst_test_questions[question_number-1])
+IndexError: list index out of range
+2018-04-21  18:30.25  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:30.25  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 183, in testing
+    create_test()
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 141, in create_test
+    lst_test_questions[num] = qn
+IndexError: list assignment index out of range
+2018-04-21  18:32.19  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:32.19  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 190, in testing
+    print('>>>>>>>>>>>', lst_test_questions[question_number-1])
+IndexError: list index out of range
+2018-04-21  18:33.17  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:34.23  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:35.07  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:35.08  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 184, in testing
+    create_test()
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 141, in create_test
+    lst_test_questions[num] = qn
+IndexError: list assignment index out of range
+2018-04-21  18:36.32  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:36.32  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 184, in testing
+    create_test()
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 141, in create_test
+    lst_test_questions[num] = qn
+IndexError: list assignment index out of range
+2018-04-21  18:39.41  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:41.58  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:41.58  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 184, in testing
+    create_test()
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 141, in create_test
+    qn = qn.replace('(','')
+AttributeError: 'tuple' object has no attribute 'replace'
+2018-04-21  18:42.54  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:43.44  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:44.40  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:45.00  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:45.04  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:48.17  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:49.14  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:49.17  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:52.53  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:52.53  views.py:204   TEST 127.0.0.1, #1
+2018-04-21  18:53.53  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:53.54  views.py:204   TEST 127.0.0.1, #1
+2018-04-21  18:59.50  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:59.50  views.py:206   TEST 127.0.0.1, #1
+2018-04-21  18:59.54  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:59.55  views.py:206   TEST 127.0.0.1, #1
+2018-04-21  18:59.58  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  18:59.58  views.py:206   TEST 127.0.0.1, #1
+2018-04-21  19:00.01  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  19:00.02  views.py:206   TEST 127.0.0.1, #1
+2018-04-21  19:01.26  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  19:01.26  views.py:207   TEST 127.0.0.1, #1
+2018-04-21  19:18.11  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  19:18.11  views.py:207   TEST 127.0.0.1, #1
+2018-04-21  19:18.17  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  19:18.18  views.py:207   TEST 127.0.0.1, #1
+2018-04-21  19:18.20  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  19:18.20  views.py:207   TEST 127.0.0.1, #1
+2018-04-21  19:18.25  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  19:18.25  views.py:207   TEST 127.0.0.1, #1
+2018-04-21  19:18.29  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  19:18.29  views.py:207   TEST 127.0.0.1, #1
+2018-04-21  19:18.42  views.py:207   TEST 127.0.0.1, #1
+2018-04-21  19:18.43  views.py:207   TEST 127.0.0.1, #2
+2018-04-21  19:18.44  views.py:207   TEST 127.0.0.1, #3
+2018-04-21  19:18.46  views.py:207   TEST 127.0.0.1, #26
+2018-04-21  19:18.49  views.py:207   TEST 127.0.0.1, #44
+2018-04-21  19:18.51  views.py:207   TEST 127.0.0.1, #22
+2018-04-21  19:18.53  views.py:207   TEST 127.0.0.1, #1
+2018-04-21  19:19.20  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  19:19.20  views.py:207   TEST 127.0.0.1, #1
+2018-04-21  19:19.24  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  19:19.24  views.py:207   TEST 127.0.0.1, #1
+2018-04-21  19:19.27  views.py:207   TEST 127.0.0.1, #3
+2018-04-21  19:19.29  views.py:207   TEST 127.0.0.1, #26
+2018-04-21  19:19.31  views.py:207   TEST 127.0.0.1, #42
+2018-04-21  19:19.34  views.py:207   TEST 127.0.0.1, #35
+2018-04-21  19:19.40  views.py:207   TEST 127.0.0.1, #45
+2018-04-21  19:19.42  views.py:207   TEST 127.0.0.1, #2
+2018-04-21  19:19.45  views.py:207   TEST 127.0.0.1, #1
+2018-04-21  19:19.55  views.py:107   ---------- CREATE NEW TEST ----------
+2018-04-21  19:19.56  views.py:207   TEST 127.0.0.1, #1
+2018-04-21  20:05.36  views.py:297   ===== END TEST (127.0.0.1) = ri.0 wr.0 na.45  - THE TEST IS FAILED! - 
+2018-04-22  05:41.26  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:41.27  views.py:211   TEST 127.0.0.1, #1
+2018-04-22  05:41.27  exception.py:118  Internal Server Error: /testing/yes/1/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 214, in testing
+    q_num = lst_test_questions[question_number-1]
+IndexError: list index out of range
+2018-04-22  05:43.07  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:43.08  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:43.11  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:43.11  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:43.13  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:43.14  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:43.22  views.py:66   LEARN (127.0.0.1) sec.4  #1 (of 20)
+2018-04-22  05:43.24  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:43.24  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:43.30  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:43.30  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:43.35  exception.py:118  Internal Server Error: /testing/no/2/1-0-0-0-0/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 194, in testing
+    user_answer_processing(user_answer)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 160, in user_answer_processing
+    qnum = lst_test_questions[q_order_num]
+IndexError: list index out of range
+2018-04-22  05:43.39  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:43.39  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:43.40  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:43.41  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:44.28  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:44.29  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:48.11  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:48.11  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:48.21  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:48.21  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:48.26  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:48.26  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:48.42  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:48.42  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:48.45  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:48.45  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:48.49  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:48.49  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:49.01  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:49.01  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:50.40  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:50.40  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:50.42  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:50.42  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:50.44  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:50.45  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:50.46  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:50.46  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:50.47  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:50.48  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:50.49  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:50.50  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:50.52  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:50.52  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:50.53  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:50.53  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:50.54  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:50.55  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:50.56  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:50.56  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:50.57  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:50.57  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:50.58  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:50.58  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:50.59  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:51.00  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:51.00  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:51.01  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:51.02  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:51.02  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:51.03  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:51.03  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:51.09  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:51.09  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:51.10  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:51.12  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:51.14  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:51.14  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:51.16  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:51.16  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:51.17  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:51.18  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:51.19  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:51.20  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:51.21  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:51.21  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:51.22  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:51.22  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:51.23  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:51.24  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:51.25  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:51.25  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:51.27  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:51.27  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:51.28  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:51.29  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:51.53  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:51.54  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:51.55  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:51.55  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:51.57  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:51.57  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:51.58  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:51.59  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:52.00  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:52.00  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:52.02  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:52.02  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:52.04  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:52.04  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:52.05  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:52.05  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:52.07  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:52.07  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:52.08  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:52.08  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:52.10  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:52.10  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:52.11  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:52.11  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:52.12  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:52.13  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:52.14  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:52.14  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:52.15  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:52.16  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:52.17  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:52.17  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:52.18  views.py:106   ---------- CREATE NEW TEST ----------
+2018-04-22  05:52.19  views.py:210   TEST 127.0.0.1, #1
+2018-04-22  05:56.01  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  05:56.01  views.py:200   TEST 127.0.0.1, #1
+2018-04-22  05:56.07  views.py:200   TEST 127.0.0.1, #21
+2018-04-22  05:56.11  views.py:200   TEST 127.0.0.1, #2
+2018-04-22  05:56.15  views.py:200   TEST 127.0.0.1, #45
+2018-04-22  05:56.20  views.py:200   TEST 127.0.0.1, #44
+2018-04-22  05:56.21  views.py:200   TEST 127.0.0.1, #43
+2018-04-22  05:56.24  views.py:200   TEST 127.0.0.1, #42
+2018-04-22  05:56.27  views.py:200   TEST 127.0.0.1, #22
+2018-04-22  05:56.30  views.py:200   TEST 127.0.0.1, #23
+2018-04-22  05:59.15  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  05:59.16  views.py:197   TEST 127.0.0.1, #1
+2018-04-22  05:59.18  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  05:59.18  views.py:197   TEST 127.0.0.1, #1
+2018-04-22  05:59.20  views.py:197   TEST 127.0.0.1, #2
+2018-04-22  05:59.20  views.py:197   TEST 127.0.0.1, #2
+2018-04-22  05:59.22  views.py:197   TEST 127.0.0.1, #1
+2018-04-22  05:59.23  views.py:197   TEST 127.0.0.1, #45
+2018-04-22  05:59.25  views.py:197   TEST 127.0.0.1, #2
+2018-04-22  05:59.28  views.py:197   TEST 127.0.0.1, #2
+2018-04-22  05:59.30  views.py:197   TEST 127.0.0.1, #2
+2018-04-22  05:59.31  views.py:197   TEST 127.0.0.1, #2
+2018-04-22  06:00.02  views.py:197   TEST 127.0.0.1, #43
+2018-04-22  06:00.05  views.py:197   TEST 127.0.0.1, #2
+2018-04-22  06:00.06  views.py:197   TEST 127.0.0.1, #2
+2018-04-22  06:00.08  views.py:197   TEST 127.0.0.1, #2
+2018-04-22  06:00.09  views.py:197   TEST 127.0.0.1, #2
+2018-04-22  06:00.10  views.py:197   TEST 127.0.0.1, #2
+2018-04-22  06:00.13  views.py:197   TEST 127.0.0.1, #2
+2018-04-22  06:00.15  views.py:197   TEST 127.0.0.1, #3
+2018-04-22  06:00.17  views.py:197   TEST 127.0.0.1, #3
+2018-04-22  06:00.18  views.py:197   TEST 127.0.0.1, #2
+2018-04-22  06:00.19  views.py:197   TEST 127.0.0.1, #2
+2018-04-22  06:02.38  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  06:02.38  views.py:198   TEST 127.0.0.1, #1
+2018-04-22  06:02.40  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  06:02.41  views.py:198   TEST 127.0.0.1, #1
+2018-04-22  06:02.42  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  06:02.42  views.py:198   TEST 127.0.0.1, #1
+2018-04-22  06:02.43  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  06:02.44  views.py:198   TEST 127.0.0.1, #1
+2018-04-22  06:02.45  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  06:02.45  views.py:198   TEST 127.0.0.1, #1
+2018-04-22  06:02.46  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  06:02.46  views.py:198   TEST 127.0.0.1, #1
+2018-04-22  06:02.47  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  06:02.47  views.py:198   TEST 127.0.0.1, #1
+2018-04-22  06:02.48  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  06:02.48  views.py:198   TEST 127.0.0.1, #1
+2018-04-22  06:02.49  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  06:02.49  views.py:198   TEST 127.0.0.1, #1
+2018-04-22  06:02.50  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  06:02.50  views.py:198   TEST 127.0.0.1, #1
+2018-04-22  06:02.51  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  06:02.51  views.py:198   TEST 127.0.0.1, #1
+2018-04-22  06:02.52  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  06:02.52  views.py:198   TEST 127.0.0.1, #1
+2018-04-22  06:02.53  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  06:02.53  views.py:198   TEST 127.0.0.1, #1
+2018-04-22  06:02.54  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  06:02.54  views.py:198   TEST 127.0.0.1, #1
+2018-04-22  06:02.55  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  06:02.55  views.py:198   TEST 127.0.0.1, #1
+2018-04-22  06:02.56  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  06:02.56  views.py:198   TEST 127.0.0.1, #1
+2018-04-22  06:02.57  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  06:02.57  views.py:198   TEST 127.0.0.1, #1
+2018-04-22  06:02.59  views.py:198   TEST 127.0.0.1, #3
+2018-04-22  06:03.02  views.py:198   TEST 127.0.0.1, #38
+2018-04-22  06:03.10  views.py:198   TEST 127.0.0.1, #39
+2018-04-22  06:03.12  views.py:198   TEST 127.0.0.1, #40
+2018-04-22  06:03.13  views.py:198   TEST 127.0.0.1, #41
+2018-04-22  06:03.14  views.py:198   TEST 127.0.0.1, #40
+2018-04-22  06:03.16  views.py:198   TEST 127.0.0.1, #39
+2018-04-22  06:07.09  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  06:07.09  views.py:184   TEST 127.0.0.1, #1
+2018-04-22  06:07.15  views.py:184   TEST 127.0.0.1, #2
+2018-04-22  06:07.15  views.py:184   TEST 127.0.0.1, #2
+2018-04-22  06:07.22  views.py:184   TEST 127.0.0.1, #3
+2018-04-22  06:07.26  views.py:184   TEST 127.0.0.1, #42
+2018-04-22  06:07.39  views.py:184   TEST 127.0.0.1, #43
+2018-04-22  06:08.03  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  06:08.04  views.py:184   TEST 127.0.0.1, #1
+2018-04-22  06:08.18  views.py:184   TEST 127.0.0.1, #42
+2018-04-22  06:08.24  views.py:184   TEST 127.0.0.1, #1
+2018-04-22  06:42.47  views.py:185   TEST 127.0.0.1, #1
+2018-04-22  06:42.52  views.py:185   TEST 127.0.0.1, #44
+2018-04-22  06:42.54  views.py:185   TEST 127.0.0.1, #2
+2018-04-22  06:42.56  views.py:185   TEST 127.0.0.1, #1
+2018-04-22  06:43.09  views.py:185   TEST 127.0.0.1, #40
+2018-04-22  06:43.13  views.py:185   TEST 127.0.0.1, #1
+2018-04-22  06:53.05  views.py:267   ===== END TEST (127.0.0.1) = ri.0 wr.1 na.44  - THE TEST IS FAILED! - 
+2018-04-22  06:54.18  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  06:54.18  views.py:186   TEST 127.0.0.1, #1
+2018-04-22  06:54.26  views.py:186   TEST 127.0.0.1, #2
+2018-04-22  06:54.26  views.py:186   TEST 127.0.0.1, #2
+2018-04-22  06:54.28  views.py:186   TEST 127.0.0.1, #3
+2018-04-22  06:54.30  views.py:186   TEST 127.0.0.1, #4
+2018-04-22  06:54.32  views.py:186   TEST 127.0.0.1, #5
+2018-04-22  06:54.35  views.py:186   TEST 127.0.0.1, #2
+2018-04-22  06:54.37  views.py:186   TEST 127.0.0.1, #44
+2018-04-22  06:54.39  views.py:186   TEST 127.0.0.1, #38
+2018-04-22  06:54.46  views.py:186   TEST 127.0.0.1, #9
+2018-04-22  06:54.49  views.py:186   TEST 127.0.0.1, #2
+2018-04-22  06:54.51  views.py:186   TEST 127.0.0.1, #44
+2018-04-22  06:54.55  views.py:186   TEST 127.0.0.1, #1
+2018-04-22  06:54.59  views.py:186   TEST 127.0.0.1, #2
+2018-04-22  06:55.03  views.py:186   TEST 127.0.0.1, #1
+2018-04-22  06:55.10  views.py:186   TEST 127.0.0.1, #41
+2018-04-22  06:55.16  views.py:186   TEST 127.0.0.1, #44
+2018-04-22  06:55.20  views.py:186   TEST 127.0.0.1, #43
+2018-04-22  06:55.21  views.py:186   TEST 127.0.0.1, #44
+2018-04-22  07:39.21  views.py:268   ===== END TEST (127.0.0.1) = ri.0 wr.0 na.45  - THE TEST IS FAILED! - 
+2018-04-22  08:04.41  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  08:04.41  views.py:187   TEST 127.0.0.1, #1
+2018-04-22  08:04.43  exception.py:118  Internal Server Error: /testing/no/2/1-0-0-0-0/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 183, in testing
+    user_answer_processing(user_answer)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 163, in user_answer_processing
+    curr_question = TestQuestion.objects.filter(q_num_in_test__exact=q_order_num).up
+AttributeError: 'QuerySet' object has no attribute 'up'
+2018-04-22  08:04.43  exception.py:118  Internal Server Error: /testing/no/2/1-0-0-0-0/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 183, in testing
+    user_answer_processing(user_answer)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 163, in user_answer_processing
+    curr_question = TestQuestion.objects.filter(q_num_in_test__exact=q_order_num).up
+AttributeError: 'QuerySet' object has no attribute 'up'
+2018-04-22  08:05.38  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  08:05.38  views.py:187   TEST 127.0.0.1, #1
+2018-04-22  08:05.40  exception.py:118  Internal Server Error: /testing/no/2/1-0-0-0-0/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 183, in testing
+    user_answer_processing(user_answer)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 173, in user_answer_processing
+    curr_question.save()
+AttributeError: 'QuerySet' object has no attribute 'save'
+2018-04-22  08:05.40  exception.py:118  Internal Server Error: /testing/no/2/1-0-0-0-0/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 183, in testing
+    user_answer_processing(user_answer)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 173, in user_answer_processing
+    curr_question.save()
+AttributeError: 'QuerySet' object has no attribute 'save'
+2018-04-22  08:05.54  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  08:05.55  views.py:187   TEST 127.0.0.1, #1
+2018-04-22  08:05.56  views.py:187   TEST 127.0.0.1, #2
+2018-04-22  08:05.56  views.py:187   TEST 127.0.0.1, #2
+2018-04-22  08:05.59  views.py:187   TEST 127.0.0.1, #3
+2018-04-22  08:06.05  exception.py:118  Internal Server Error: /testing/no/4/3-1-0-0-0/
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/options.py", line 566, in get_field
+    return self.fields_map[field_name]
+KeyError: 'css_class_is_answer'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 183, in testing
+    user_answer_processing(user_answer)
+  File "/Users/sfalkov/falkov_projects/norveg/app_quiz/views.py", line 169, in user_answer_processing
+    TestQuestion.objects.filter(q_num_in_test__exact=q_order_num).update(css_class_is_answer=css_class_is_answer)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/query.py", line 688, in update
+    query.add_update_values(kwargs)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/sql/subqueries.py", line 117, in add_update_values
+    field = self.get_meta().get_field(name)
+  File "/Users/sfalkov/.virtualenvs/norveg/lib/python3.6/site-packages/django/db/models/options.py", line 568, in get_field
+    raise FieldDoesNotExist("%s has no field named '%s'" % (self.object_name, field_name))
+django.core.exceptions.FieldDoesNotExist: TestQuestion has no field named 'css_class_is_answer'
+2018-04-22  08:06.29  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  08:06.29  views.py:187   TEST 127.0.0.1, #1
+2018-04-22  08:06.32  views.py:187   TEST 127.0.0.1, #2
+2018-04-22  08:07.23  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  08:07.23  views.py:188   TEST 127.0.0.1, #1
+2018-04-22  08:07.26  views.py:188   TEST 127.0.0.1, #42
+2018-04-22  08:07.27  views.py:188   TEST 127.0.0.1, #1
+2018-04-22  08:07.29  views.py:188   TEST 127.0.0.1, #2
+2018-04-22  08:07.30  views.py:188   TEST 127.0.0.1, #1
+2018-04-22  08:07.38  views.py:188   TEST 127.0.0.1, #2
+2018-04-22  08:07.41  views.py:188   TEST 127.0.0.1, #3
+2018-04-22  08:07.44  views.py:188   TEST 127.0.0.1, #4
+2018-04-22  08:07.47  views.py:188   TEST 127.0.0.1, #5
+2018-04-22  08:07.50  views.py:188   TEST 127.0.0.1, #44
+2018-04-22  08:07.52  views.py:188   TEST 127.0.0.1, #40
+2018-04-22  08:07.54  views.py:188   TEST 127.0.0.1, #1
+2018-04-22  08:07.56  views.py:188   TEST 127.0.0.1, #2
+2018-04-22  08:14.40  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  08:14.41  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:14.43  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:14.43  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:14.44  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:14.45  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:14.48  views.py:177   TEST 127.0.0.1, #42
+2018-04-22  08:14.51  views.py:177   TEST 127.0.0.1, #41
+2018-04-22  08:14.52  views.py:177   TEST 127.0.0.1, #40
+2018-04-22  08:14.57  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:15.00  views.py:177   TEST 127.0.0.1, #42
+2018-04-22  08:15.02  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:15.08  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:15.12  views.py:177   TEST 127.0.0.1, #3
+2018-04-22  08:15.16  views.py:177   TEST 127.0.0.1, #4
+2018-04-22  08:15.19  views.py:177   TEST 127.0.0.1, #5
+2018-04-22  08:15.22  views.py:177   TEST 127.0.0.1, #42
+2018-04-22  08:15.25  views.py:177   TEST 127.0.0.1, #43
+2018-04-22  08:15.27  views.py:177   TEST 127.0.0.1, #43
+2018-04-22  08:15.30  views.py:177   TEST 127.0.0.1, #43
+2018-04-22  08:15.33  views.py:177   TEST 127.0.0.1, #43
+2018-04-22  08:15.35  views.py:177   TEST 127.0.0.1, #43
+2018-04-22  08:15.37  views.py:177   TEST 127.0.0.1, #43
+2018-04-22  08:15.38  views.py:177   TEST 127.0.0.1, #43
+2018-04-22  08:15.48  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:15.50  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:15.52  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:30.10  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  08:30.10  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:30.17  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:30.23  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:30.26  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:30.29  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:30.32  views.py:177   TEST 127.0.0.1, #3
+2018-04-22  08:30.34  views.py:177   TEST 127.0.0.1, #4
+2018-04-22  08:30.36  views.py:177   TEST 127.0.0.1, #5
+2018-04-22  08:30.38  views.py:177   TEST 127.0.0.1, #6
+2018-04-22  08:30.39  views.py:177   TEST 127.0.0.1, #7
+2018-04-22  08:30.41  views.py:177   TEST 127.0.0.1, #8
+2018-04-22  08:30.43  views.py:177   TEST 127.0.0.1, #9
+2018-04-22  08:30.45  views.py:177   TEST 127.0.0.1, #10
+2018-04-22  08:30.47  views.py:177   TEST 127.0.0.1, #11
+2018-04-22  08:30.48  views.py:177   TEST 127.0.0.1, #12
+2018-04-22  08:30.50  views.py:177   TEST 127.0.0.1, #13
+2018-04-22  08:30.51  views.py:177   TEST 127.0.0.1, #14
+2018-04-22  08:30.53  views.py:177   TEST 127.0.0.1, #15
+2018-04-22  08:30.54  views.py:177   TEST 127.0.0.1, #16
+2018-04-22  08:30.56  views.py:177   TEST 127.0.0.1, #17
+2018-04-22  08:30.57  views.py:177   TEST 127.0.0.1, #18
+2018-04-22  08:31.00  views.py:177   TEST 127.0.0.1, #19
+2018-04-22  08:31.02  views.py:177   TEST 127.0.0.1, #20
+2018-04-22  08:31.04  views.py:177   TEST 127.0.0.1, #21
+2018-04-22  08:31.06  views.py:177   TEST 127.0.0.1, #22
+2018-04-22  08:31.07  views.py:177   TEST 127.0.0.1, #23
+2018-04-22  08:31.09  views.py:177   TEST 127.0.0.1, #24
+2018-04-22  08:31.11  views.py:177   TEST 127.0.0.1, #25
+2018-04-22  08:31.13  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:31.15  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:31.18  views.py:177   TEST 127.0.0.1, #45
+2018-04-22  08:31.39  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:31.43  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:31.45  views.py:177   TEST 127.0.0.1, #43
+2018-04-22  08:31.48  views.py:177   TEST 127.0.0.1, #27
+2018-04-22  08:31.55  views.py:177   TEST 127.0.0.1, #39
+2018-04-22  08:31.59  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:32.02  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:33.50  views.py:177   TEST 127.0.0.1, #21
+2018-04-22  08:33.56  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:34.00  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:34.02  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:34.03  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:34.04  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:34.06  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:34.07  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:34.08  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:34.09  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:34.11  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:34.12  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:34.14  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:34.15  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:34.17  views.py:177   TEST 127.0.0.1, #3
+2018-04-22  08:34.19  views.py:177   TEST 127.0.0.1, #3
+2018-04-22  08:34.20  views.py:177   TEST 127.0.0.1, #3
+2018-04-22  08:34.22  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:34.23  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:34.27  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:34.28  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:34.31  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:34.32  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:34.34  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:34.36  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:35.27  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  08:35.27  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:36.04  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  08:36.04  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:36.09  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:36.09  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:36.10  views.py:177   TEST 127.0.0.1, #3
+2018-04-22  08:36.12  views.py:177   TEST 127.0.0.1, #41
+2018-04-22  08:36.14  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:36.16  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:36.18  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:36.19  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:36.20  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:36.22  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:36.23  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:36.24  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:36.25  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:36.28  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:36.29  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:37.13  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:37.20  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:37.21  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:37.22  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:37.23  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:37.25  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:37.26  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:37.38  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:37.41  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:37.43  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:37.44  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:37.45  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:37.46  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:37.47  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:37.48  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:37.50  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:37.51  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:37.59  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:38.02  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:38.03  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:38.05  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:38.06  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:38.08  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:38.09  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:38.10  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:38.11  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:38.37  views.py:177   TEST 127.0.0.1, #41
+2018-04-22  08:41.12  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  08:41.12  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:41.47  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:41.47  views.py:177   TEST 127.0.0.1, #2
+2018-04-22  08:41.57  views.py:177   TEST 127.0.0.1, #3
+2018-04-22  08:42.10  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  08:42.10  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:43.48  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  08:43.49  views.py:177   TEST 127.0.0.1, #1
+2018-04-22  08:47.37  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  08:47.38  views.py:179   TEST 127.0.0.1, #1
+2018-04-22  08:47.43  views.py:179   TEST 127.0.0.1, #2
+2018-04-22  08:47.43  views.py:179   TEST 127.0.0.1, #2
+2018-04-22  08:48.01  views.py:179   TEST 127.0.0.1, #3
+2018-04-22  08:48.29  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  08:48.29  views.py:179   TEST 127.0.0.1, #1
+2018-04-22  08:48.34  views.py:179   TEST 127.0.0.1, #2
+2018-04-22  08:48.34  views.py:179   TEST 127.0.0.1, #2
+2018-04-22  08:48.52  views.py:179   TEST 127.0.0.1, #3
+2018-04-22  08:49.28  views.py:179   TEST 127.0.0.1, #40
+2018-04-22  08:49.36  views.py:179   TEST 127.0.0.1, #40
+2018-04-22  08:49.41  views.py:179   TEST 127.0.0.1, #40
+2018-04-22  08:49.54  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  08:49.54  views.py:179   TEST 127.0.0.1, #1
+2018-04-22  08:50.00  views.py:179   TEST 127.0.0.1, #1
+2018-04-22  08:50.24  views.py:179   TEST 127.0.0.1, #2
+2018-04-22  08:50.46  views.py:179   TEST 127.0.0.1, #3
+2018-04-22  08:50.54  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  08:50.54  views.py:179   TEST 127.0.0.1, #1
+2018-04-22  08:50.58  views.py:179   TEST 127.0.0.1, #2
+2018-04-22  08:50.59  views.py:179   TEST 127.0.0.1, #2
+2018-04-22  08:51.18  views.py:179   TEST 127.0.0.1, #3
+2018-04-22  08:51.30  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  08:51.30  views.py:179   TEST 127.0.0.1, #1
+2018-04-22  08:53.20  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  08:53.20  views.py:179   TEST 127.0.0.1, #1
+2018-04-22  08:53.53  views.py:179   TEST 127.0.0.1, #1
+2018-04-22  08:53.54  views.py:179   TEST 127.0.0.1, #1
+2018-04-22  08:54.41  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  08:54.41  views.py:179   TEST 127.0.0.1, #1
+2018-04-22  09:00.45  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  09:00.45  views.py:179   TEST 127.0.0.1, #1
+2018-04-22  09:01.41  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  09:01.41  views.py:179   TEST 127.0.0.1, #1
+2018-04-22  09:02.23  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  09:02.23  views.py:179   TEST 127.0.0.1, #1
+2018-04-22  09:05.28  views.py:179   TEST 127.0.0.1, #2
+2018-04-22  09:05.28  views.py:179   TEST 127.0.0.1, #2
+2018-04-22  09:05.30  views.py:179   TEST 127.0.0.1, #4
+2018-04-22  09:05.32  views.py:179   TEST 127.0.0.1, #20
+2018-04-22  09:05.34  views.py:179   TEST 127.0.0.1, #2
+2018-04-22  09:05.36  views.py:179   TEST 127.0.0.1, #1
+2018-04-22  09:05.38  views.py:179   TEST 127.0.0.1, #4
+2018-04-22  09:05.40  views.py:179   TEST 127.0.0.1, #39
+2018-04-22  09:05.43  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  09:05.43  views.py:179   TEST 127.0.0.1, #1
+2018-04-22  09:05.45  views.py:179   TEST 127.0.0.1, #2
+2018-04-22  09:05.45  views.py:179   TEST 127.0.0.1, #2
+2018-04-22  09:05.47  views.py:179   TEST 127.0.0.1, #5
+2018-04-22  09:05.49  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  09:05.49  views.py:179   TEST 127.0.0.1, #1
+2018-04-22  09:05.51  views.py:179   TEST 127.0.0.1, #3
+2018-04-22  09:52.14  views.py:260   ===== END TEST (127.0.0.1) = ri.0 wr.0 na.45  - THE TEST IS FAILED! - 
+2018-04-22  10:53.20  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  10:53.21  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  10:53.26  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  10:53.26  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  10:53.30  views.py:180   TEST 127.0.0.1, #42
+2018-04-22  10:53.32  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  10:53.34  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  10:53.36  views.py:180   TEST 127.0.0.1, #41
+2018-04-22  10:53.37  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:14.29  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  11:14.29  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:15.01  views.py:180   TEST 127.0.0.1, #43
+2018-04-22  11:15.03  views.py:180   TEST 127.0.0.1, #45
+2018-04-22  11:15.05  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:15.07  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:15.15  views.py:180   TEST 127.0.0.1, #43
+2018-04-22  11:15.17  views.py:180   TEST 127.0.0.1, #27
+2018-04-22  11:15.19  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:16.08  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:16.09  views.py:180   TEST 127.0.0.1, #3
+2018-04-22  11:16.09  views.py:180   TEST 127.0.0.1, #4
+2018-04-22  11:16.11  views.py:180   TEST 127.0.0.1, #43
+2018-04-22  11:16.13  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:16.15  views.py:180   TEST 127.0.0.1, #40
+2018-04-22  11:16.16  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:18.22  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  11:18.22  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:18.33  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  11:18.33  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:18.36  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  11:18.37  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:18.40  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  11:18.41  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:18.44  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  11:18.44  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:18.48  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  11:18.49  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:18.53  views.py:180   TEST 127.0.0.1, #43
+2018-04-22  11:18.55  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:18.57  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:18.59  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:19.09  views.py:180   TEST 127.0.0.1, #44
+2018-04-22  11:19.12  views.py:180   TEST 127.0.0.1, #40
+2018-04-22  11:19.24  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:19.35  views.py:180   TEST 127.0.0.1, #45
+2018-04-22  11:19.37  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:19.42  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:19.46  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:21.50  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:21.53  views.py:180   TEST 127.0.0.1, #3
+2018-04-22  11:21.55  views.py:180   TEST 127.0.0.1, #4
+2018-04-22  11:22.00  views.py:180   TEST 127.0.0.1, #3
+2018-04-22  11:22.02  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:22.05  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:22.12  views.py:180   TEST 127.0.0.1, #45
+2018-04-22  11:22.14  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:23.20  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  11:23.23  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  11:23.24  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:23.26  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:23.27  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:25.37  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  11:25.37  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:26.04  views.py:180   TEST 127.0.0.1, #43
+2018-04-22  11:26.06  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:26.08  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:26.17  views.py:180   TEST 127.0.0.1, #3
+2018-04-22  11:26.32  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:26.55  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:27.01  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:27.07  views.py:180   TEST 127.0.0.1, #3
+2018-04-22  11:27.48  views.py:63   LEARN (127.0.0.1) sec.5  #1 (of 6)
+2018-04-22  11:27.53  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  11:27.53  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:28.08  views.py:180   TEST 127.0.0.1, #44
+2018-04-22  11:28.10  views.py:180   TEST 127.0.0.1, #27
+2018-04-22  11:28.11  views.py:180   TEST 127.0.0.1, #8
+2018-04-22  11:28.45  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:28.58  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:29.00  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:29.03  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:29.04  views.py:180   TEST 127.0.0.1, #3
+2018-04-22  11:29.07  views.py:180   TEST 127.0.0.1, #4
+2018-04-22  11:29.09  views.py:180   TEST 127.0.0.1, #5
+2018-04-22  11:29.11  views.py:180   TEST 127.0.0.1, #3
+2018-04-22  11:29.22  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:29.25  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:29.31  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:29.32  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:45.59  views.py:260   ===== END TEST (127.0.0.1) = ri.0 wr.0 na.45  - THE TEST IS FAILED! - 
+2018-04-22  11:46.01  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  11:46.02  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:46.03  views.py:180   TEST 127.0.0.1, #38
+2018-04-22  11:46.06  views.py:180   TEST 127.0.0.1, #39
+2018-04-22  11:46.09  views.py:180   TEST 127.0.0.1, #41
+2018-04-22  11:46.11  views.py:260   ===== END TEST (127.0.0.1) = ri.1 wr.1 na.43  - THE TEST IS FAILED! - 
+2018-04-22  11:46.20  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  11:46.20  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:46.41  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:46.43  views.py:180   TEST 127.0.0.1, #3
+2018-04-22  11:46.47  views.py:180   TEST 127.0.0.1, #4
+2018-04-22  11:46.50  views.py:180   TEST 127.0.0.1, #43
+2018-04-22  11:46.55  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:46.59  views.py:180   TEST 127.0.0.1, #42
+2018-04-22  11:47.02  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:47.05  views.py:180   TEST 127.0.0.1, #3
+2018-04-22  11:47.07  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:49.49  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:50.06  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:50.08  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:52.10  views.py:180   TEST 127.0.0.1, #40
+2018-04-22  11:52.12  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:52.15  views.py:180   TEST 127.0.0.1, #43
+2018-04-22  11:52.16  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:52.32  views.py:180   TEST 127.0.0.1, #22
+2018-04-22  11:52.34  views.py:180   TEST 127.0.0.1, #21
+2018-04-22  11:52.35  views.py:180   TEST 127.0.0.1, #20
+2018-04-22  11:52.36  views.py:180   TEST 127.0.0.1, #19
+2018-04-22  11:53.39  views.py:180   TEST 127.0.0.1, #3
+2018-04-22  11:53.41  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:53.42  views.py:180   TEST 127.0.0.1, #3
+2018-04-22  11:53.43  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:53.44  views.py:180   TEST 127.0.0.1, #3
+2018-04-22  11:53.45  views.py:180   TEST 127.0.0.1, #3
+2018-04-22  11:53.46  views.py:180   TEST 127.0.0.1, #3
+2018-04-22  11:53.48  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:53.49  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:53.50  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:53.51  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:53.53  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:53.54  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:53.55  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:53.56  views.py:180   TEST 127.0.0.1, #3
+2018-04-22  11:53.57  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:53.58  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:53.59  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:54.00  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:54.02  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:54.13  views.py:180   TEST 127.0.0.1, #1
+2018-04-22  11:54.13  views.py:180   TEST 127.0.0.1, #3
+2018-04-22  11:54.14  views.py:180   TEST 127.0.0.1, #4
+2018-04-22  11:54.15  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:54.17  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:54.18  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:54.19  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:54.20  views.py:180   TEST 127.0.0.1, #3
+2018-04-22  11:54.21  views.py:180   TEST 127.0.0.1, #2
+2018-04-22  11:56.38  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  11:56.38  views.py:181   TEST 127.0.0.1, #1
+2018-04-22  11:56.55  views.py:181   TEST 127.0.0.1, #2
+2018-04-22  11:56.55  views.py:181   TEST 127.0.0.1, #2
+2018-04-22  11:56.59  views.py:181   TEST 127.0.0.1, #1
+2018-04-22  11:57.01  views.py:181   TEST 127.0.0.1, #1
+2018-04-22  11:57.03  views.py:181   TEST 127.0.0.1, #1
+2018-04-22  11:57.05  views.py:181   TEST 127.0.0.1, #1
+2018-04-22  11:57.06  views.py:181   TEST 127.0.0.1, #1
+2018-04-22  11:57.07  views.py:181   TEST 127.0.0.1, #41
+2018-04-22  11:57.08  views.py:181   TEST 127.0.0.1, #23
+2018-04-22  11:57.09  views.py:181   TEST 127.0.0.1, #5
+2018-04-22  11:57.10  views.py:181   TEST 127.0.0.1, #1
+2018-04-22  11:57.23  views.py:181   TEST 127.0.0.1, #2
+2018-04-22  11:57.27  views.py:181   TEST 127.0.0.1, #3
+2018-04-22  11:57.30  views.py:181   TEST 127.0.0.1, #4
+2018-04-22  11:57.33  views.py:181   TEST 127.0.0.1, #5
+2018-04-22  11:57.35  views.py:181   TEST 127.0.0.1, #43
+2018-04-22  11:57.37  views.py:181   TEST 127.0.0.1, #45
+2018-04-22  11:57.47  views.py:181   TEST 127.0.0.1, #39
+2018-04-22  11:57.48  views.py:181   TEST 127.0.0.1, #22
+2018-04-22  11:57.50  views.py:181   TEST 127.0.0.1, #1
+2018-04-22  11:57.51  views.py:181   TEST 127.0.0.1, #2
+2018-04-22  11:57.52  views.py:181   TEST 127.0.0.1, #3
+2018-04-22  11:57.54  views.py:181   TEST 127.0.0.1, #4
+2018-04-22  11:57.55  views.py:181   TEST 127.0.0.1, #4
+2018-04-22  11:57.56  views.py:181   TEST 127.0.0.1, #4
+2018-04-22  11:57.57  views.py:181   TEST 127.0.0.1, #3
+2018-04-22  11:57.58  views.py:181   TEST 127.0.0.1, #3
+2018-04-22  11:58.00  views.py:181   TEST 127.0.0.1, #2
+2018-04-22  11:58.01  views.py:181   TEST 127.0.0.1, #2
+2018-04-22  11:58.02  views.py:181   TEST 127.0.0.1, #1
+2018-04-22  11:58.03  views.py:181   TEST 127.0.0.1, #1
+2018-04-22  11:58.04  views.py:181   TEST 127.0.0.1, #41
+2018-04-22  11:58.07  views.py:181   TEST 127.0.0.1, #40
+2018-04-22  11:58.09  views.py:181   TEST 127.0.0.1, #41
+2018-04-22  11:58.11  views.py:181   TEST 127.0.0.1, #42
+2018-04-22  11:58.14  views.py:181   TEST 127.0.0.1, #43
+2018-04-22  11:58.17  views.py:181   TEST 127.0.0.1, #44
+2018-04-22  11:58.20  views.py:181   TEST 127.0.0.1, #45
+2018-04-22  11:58.21  views.py:181   TEST 127.0.0.1, #44
+2018-04-22  11:58.22  views.py:181   TEST 127.0.0.1, #43
+2018-04-22  11:58.23  views.py:181   TEST 127.0.0.1, #42
+2018-04-22  11:58.24  views.py:181   TEST 127.0.0.1, #41
+2018-04-22  11:58.27  views.py:181   TEST 127.0.0.1, #6
+2018-04-22  11:58.29  views.py:181   TEST 127.0.0.1, #5
+2018-04-22  11:58.30  views.py:181   TEST 127.0.0.1, #4
+2018-04-22  11:58.31  views.py:181   TEST 127.0.0.1, #3
+2018-04-22  11:58.33  views.py:181   TEST 127.0.0.1, #2
+2018-04-22  11:58.34  views.py:181   TEST 127.0.0.1, #1
+2018-04-22  11:58.37  views.py:181   TEST 127.0.0.1, #40
+2018-04-22  11:58.38  views.py:181   TEST 127.0.0.1, #42
+2018-04-22  11:58.39  views.py:181   TEST 127.0.0.1, #43
+2018-04-22  11:58.44  views.py:181   TEST 127.0.0.1, #20
+2018-04-22  11:58.45  views.py:181   TEST 127.0.0.1, #21
+2018-04-22  11:58.47  views.py:181   TEST 127.0.0.1, #22
+2018-04-22  11:58.50  views.py:181   TEST 127.0.0.1, #23
+2018-04-22  11:58.53  views.py:181   TEST 127.0.0.1, #24
+2018-04-22  11:58.57  views.py:181   TEST 127.0.0.1, #11
+2018-04-22  11:59.00  views.py:181   TEST 127.0.0.1, #12
+2018-04-22  11:59.02  views.py:181   TEST 127.0.0.1, #13
+2018-04-22  11:59.05  views.py:181   TEST 127.0.0.1, #14
+2018-04-22  11:59.10  views.py:181   TEST 127.0.0.1, #31
+2018-04-22  11:59.13  views.py:181   TEST 127.0.0.1, #32
+2018-04-22  11:59.16  views.py:181   TEST 127.0.0.1, #33
+2018-04-22  11:59.19  views.py:181   TEST 127.0.0.1, #34
+2018-04-22  11:59.26  views.py:181   TEST 127.0.0.1, #27
+2018-04-22  11:59.27  views.py:181   TEST 127.0.0.1, #4
+2018-04-22  11:59.29  views.py:181   TEST 127.0.0.1, #2
+2018-04-22  11:59.31  views.py:181   TEST 127.0.0.1, #42
+2018-04-22  11:59.33  views.py:181   TEST 127.0.0.1, #42
+2018-04-22  11:59.34  views.py:181   TEST 127.0.0.1, #42
+2018-04-22  11:59.36  views.py:181   TEST 127.0.0.1, #44
+2018-04-22  11:59.38  views.py:181   TEST 127.0.0.1, #44
+2018-04-22  11:59.39  views.py:181   TEST 127.0.0.1, #13
+2018-04-22  11:59.40  views.py:181   TEST 127.0.0.1, #13
+2018-04-22  11:59.42  views.py:181   TEST 127.0.0.1, #11
+2018-04-22  11:59.44  views.py:181   TEST 127.0.0.1, #12
+2018-04-22  11:59.45  views.py:181   TEST 127.0.0.1, #13
+2018-04-22  11:59.47  views.py:181   TEST 127.0.0.1, #14
+2018-04-22  11:59.48  views.py:181   TEST 127.0.0.1, #15
+2018-04-22  11:59.55  views.py:181   TEST 127.0.0.1, #16
+2018-04-22  11:59.57  views.py:181   TEST 127.0.0.1, #15
+2018-04-22  12:00.01  views.py:181   TEST 127.0.0.1, #14
+2018-04-22  12:00.03  views.py:181   TEST 127.0.0.1, #15
+2018-04-22  12:00.05  views.py:181   TEST 127.0.0.1, #16
+2018-04-22  12:00.07  views.py:181   TEST 127.0.0.1, #17
+2018-04-22  12:00.09  views.py:181   TEST 127.0.0.1, #18
+2018-04-22  12:00.10  views.py:181   TEST 127.0.0.1, #19
+2018-04-22  12:00.12  views.py:181   TEST 127.0.0.1, #20
+2018-04-22  12:00.13  views.py:181   TEST 127.0.0.1, #21
+2018-04-22  12:00.15  views.py:181   TEST 127.0.0.1, #22
+2018-04-22  12:00.17  views.py:181   TEST 127.0.0.1, #23
+2018-04-22  12:00.18  views.py:181   TEST 127.0.0.1, #24
+2018-04-22  12:00.20  views.py:181   TEST 127.0.0.1, #25
+2018-04-22  12:00.23  views.py:181   TEST 127.0.0.1, #6
+2018-04-22  12:00.25  views.py:181   TEST 127.0.0.1, #5
+2018-04-22  12:00.27  views.py:181   TEST 127.0.0.1, #4
+2018-04-22  12:00.29  views.py:181   TEST 127.0.0.1, #3
+2018-04-22  12:00.30  views.py:181   TEST 127.0.0.1, #2
+2018-04-22  12:00.32  views.py:181   TEST 127.0.0.1, #1
+2018-04-22  12:00.35  views.py:181   TEST 127.0.0.1, #42
+2018-04-22  12:00.36  views.py:181   TEST 127.0.0.1, #44
+2018-04-22  12:00.40  views.py:261   ===== END TEST (127.0.0.1) = ri.5 wr.12 na.28  - THE TEST IS FAILED! - 
+2018-04-22  12:44.28  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  12:44.29  views.py:176   TEST 127.0.0.1, #1
+2018-04-22  12:44.41  views.py:176   TEST 127.0.0.1, #2
+2018-04-22  12:44.41  views.py:176   TEST 127.0.0.1, #2
+2018-04-22  12:44.47  views.py:176   TEST 127.0.0.1, #3
+2018-04-22  12:44.54  views.py:176   TEST 127.0.0.1, #4
+2018-04-22  12:45.02  views.py:176   TEST 127.0.0.1, #11
+2018-04-22  12:45.04  views.py:176   TEST 127.0.0.1, #12
+2018-04-22  12:45.06  views.py:176   TEST 127.0.0.1, #12
+2018-04-22  12:45.21  views.py:176   TEST 127.0.0.1, #13
+2018-04-22  12:45.34  views.py:176   TEST 127.0.0.1, #14
+2018-04-22  12:45.38  views.py:176   TEST 127.0.0.1, #15
+2018-04-22  12:45.40  views.py:176   TEST 127.0.0.1, #16
+2018-04-22  12:45.42  views.py:176   TEST 127.0.0.1, #1
+2018-04-22  12:45.43  views.py:176   TEST 127.0.0.1, #2
+2018-04-22  12:45.45  views.py:176   TEST 127.0.0.1, #3
+2018-04-22  12:45.45  views.py:176   TEST 127.0.0.1, #4
+2018-04-22  12:45.48  views.py:176   TEST 127.0.0.1, #12
+2018-04-22  12:45.49  views.py:176   TEST 127.0.0.1, #13
+2018-04-22  12:45.51  views.py:176   TEST 127.0.0.1, #14
+2018-04-22  12:45.53  views.py:176   TEST 127.0.0.1, #15
+2018-04-22  12:45.54  views.py:176   TEST 127.0.0.1, #16
+2018-04-22  12:45.55  views.py:176   TEST 127.0.0.1, #15
+2018-04-22  12:45.57  views.py:176   TEST 127.0.0.1, #14
+2018-04-22  12:45.59  views.py:176   TEST 127.0.0.1, #13
+2018-04-22  12:46.01  views.py:176   TEST 127.0.0.1, #12
+2018-04-22  12:46.02  views.py:176   TEST 127.0.0.1, #11
+2018-04-22  12:46.03  views.py:176   TEST 127.0.0.1, #10
+2018-04-22  12:46.05  views.py:176   TEST 127.0.0.1, #9
+2018-04-22  12:46.06  views.py:176   TEST 127.0.0.1, #8
+2018-04-22  12:46.07  views.py:176   TEST 127.0.0.1, #7
+2018-04-22  12:46.13  views.py:176   TEST 127.0.0.1, #6
+2018-04-22  12:46.14  views.py:176   TEST 127.0.0.1, #5
+2018-04-22  12:46.17  views.py:176   TEST 127.0.0.1, #1
+2018-04-22  12:46.20  views.py:176   TEST 127.0.0.1, #2
+2018-04-22  12:46.22  views.py:176   TEST 127.0.0.1, #3
+2018-04-22  12:46.25  views.py:176   TEST 127.0.0.1, #4
+2018-04-22  12:46.29  views.py:176   TEST 127.0.0.1, #10
+2018-04-22  12:46.34  views.py:176   TEST 127.0.0.1, #11
+2018-04-22  12:46.36  views.py:176   TEST 127.0.0.1, #10
+2018-04-22  12:46.39  views.py:176   TEST 127.0.0.1, #9
+2018-04-22  12:46.41  views.py:176   TEST 127.0.0.1, #10
+2018-04-22  12:46.45  views.py:176   TEST 127.0.0.1, #11
+2018-04-22  12:46.48  views.py:176   TEST 127.0.0.1, #12
+2018-04-22  12:46.51  views.py:176   TEST 127.0.0.1, #13
+2018-04-22  12:46.54  views.py:176   TEST 127.0.0.1, #14
+2018-04-22  12:47.00  views.py:176   TEST 127.0.0.1, #40
+2018-04-22  12:47.04  views.py:176   TEST 127.0.0.1, #41
+2018-04-22  12:47.10  views.py:176   TEST 127.0.0.1, #42
+2018-04-22  12:47.19  views.py:176   TEST 127.0.0.1, #43
+2018-04-22  12:47.24  views.py:259   ===== END TEST (127.0.0.1) = ri.4 wr.8 na.33  - THE TEST IS FAILED! - 
+2018-04-22  12:47.31  views.py:259   ===== END TEST (127.0.0.1) = ri.4 wr.8 na.33  - THE TEST IS FAILED! - 
+2018-04-22  12:47.37  views.py:259   ===== END TEST (127.0.0.1) = ri.4 wr.8 na.33  - THE TEST IS FAILED! - 
+2018-04-22  12:47.40  views.py:259   ===== END TEST (127.0.0.1) = ri.4 wr.8 na.33  - THE TEST IS FAILED! - 
+2018-04-22  12:47.45  views.py:259   ===== END TEST (127.0.0.1) = ri.4 wr.8 na.33  - THE TEST IS FAILED! - 
+2018-04-22  12:47.50  views.py:259   ===== END TEST (127.0.0.1) = ri.4 wr.8 na.33  - THE TEST IS FAILED! - 
+2018-04-22  12:48.04  views.py:259   ===== END TEST (127.0.0.1) = ri.4 wr.8 na.33  - THE TEST IS FAILED! - 
+2018-04-22  12:48.07  views.py:259   ===== END TEST (127.0.0.1) = ri.4 wr.8 na.33  - THE TEST IS FAILED! - 
+2018-04-22  12:48.10  views.py:259   ===== END TEST (127.0.0.1) = ri.4 wr.8 na.33  - THE TEST IS FAILED! - 
+2018-04-22  12:48.12  views.py:259   ===== END TEST (127.0.0.1) = ri.4 wr.8 na.33  - THE TEST IS FAILED! - 
+2018-04-22  12:48.15  views.py:259   ===== END TEST (127.0.0.1) = ri.4 wr.8 na.33  - THE TEST IS FAILED! - 
+2018-04-22  12:48.17  views.py:259   ===== END TEST (127.0.0.1) = ri.4 wr.8 na.33  - THE TEST IS FAILED! - 
+2018-04-22  12:48.19  views.py:259   ===== END TEST (127.0.0.1) = ri.4 wr.8 na.33  - THE TEST IS FAILED! - 
+2018-04-22  12:48.22  views.py:259   ===== END TEST (127.0.0.1) = ri.4 wr.8 na.33  - THE TEST IS FAILED! - 
+2018-04-22  12:48.23  views.py:259   ===== END TEST (127.0.0.1) = ri.4 wr.8 na.33  - THE TEST IS FAILED! - 
+2018-04-22  12:48.25  views.py:259   ===== END TEST (127.0.0.1) = ri.4 wr.8 na.33  - THE TEST IS FAILED! - 
+2018-04-22  12:48.26  views.py:259   ===== END TEST (127.0.0.1) = ri.4 wr.8 na.33  - THE TEST IS FAILED! - 
+2018-04-22  12:48.34  views.py:63   LEARN (127.0.0.1) sec.4  #1 (of 20)
+2018-04-22  12:55.38  views.py:63   LEARN (127.0.0.1) sec.3  #1 (of 15)
+2018-04-22  12:55.46  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  12:55.46  views.py:176   TEST 127.0.0.1, #1
+2018-04-22  13:10.07  views.py:257   ===== END TEST (127.0.0.1) = ri.0 wr.0 na.45  - THE TEST IS FAILED! - 
+2018-04-22  13:10.09  views.py:257   ===== END TEST (127.0.0.1) = ri.0 wr.0 na.45  - THE TEST IS FAILED! - 
+2018-04-22  13:10.14  views.py:257   ===== END TEST (127.0.0.1) = ri.0 wr.0 na.45  - THE TEST IS FAILED! - 
+2018-04-22  13:10.16  views.py:257   ===== END TEST (127.0.0.1) = ri.0 wr.0 na.45  - THE TEST IS FAILED! - 
+2018-04-22  13:10.18  views.py:257   ===== END TEST (127.0.0.1) = ri.0 wr.0 na.45  - THE TEST IS FAILED! - 
+2018-04-22  13:10.21  views.py:257   ===== END TEST (127.0.0.1) = ri.0 wr.0 na.45  - THE TEST IS FAILED! - 
+2018-04-22  13:10.23  views.py:257   ===== END TEST (127.0.0.1) = ri.0 wr.0 na.45  - THE TEST IS FAILED! - 
+2018-04-22  13:10.26  views.py:257   ===== END TEST (127.0.0.1) = ri.0 wr.0 na.45  - THE TEST IS FAILED! - 
+2018-04-22  13:10.28  views.py:257   ===== END TEST (127.0.0.1) = ri.0 wr.0 na.45  - THE TEST IS FAILED! - 
+2018-04-22  13:10.30  views.py:257   ===== END TEST (127.0.0.1) = ri.0 wr.0 na.45  - THE TEST IS FAILED! - 
+2018-04-22  13:10.31  views.py:257   ===== END TEST (127.0.0.1) = ri.0 wr.0 na.45  - THE TEST IS FAILED! - 
+2018-04-22  13:10.33  views.py:257   ===== END TEST (127.0.0.1) = ri.0 wr.0 na.45  - THE TEST IS FAILED! - 
+2018-04-22  13:10.46  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  13:10.46  views.py:176   TEST 127.0.0.1, #1
+2018-04-22  13:10.50  views.py:257   ===== END TEST (127.0.0.1) = ri.0 wr.0 na.45  - THE TEST IS FAILED! - 
+2018-04-22  13:10.52  views.py:257   ===== END TEST (127.0.0.1) = ri.0 wr.0 na.45  - THE TEST IS FAILED! - 
+2018-04-22  13:10.54  views.py:257   ===== END TEST (127.0.0.1) = ri.0 wr.0 na.45  - THE TEST IS FAILED! - 
+2018-04-22  13:10.56  views.py:257   ===== END TEST (127.0.0.1) = ri.0 wr.0 na.45  - THE TEST IS FAILED! - 
+2018-04-22  13:10.57  views.py:257   ===== END TEST (127.0.0.1) = ri.0 wr.0 na.45  - THE TEST IS FAILED! - 
+2018-04-22  13:10.58  views.py:257   ===== END TEST (127.0.0.1) = ri.0 wr.0 na.45  - THE TEST IS FAILED! - 
+2018-04-22  13:11.01  views.py:257   ===== END TEST (127.0.0.1) = ri.0 wr.0 na.45  - THE TEST IS FAILED! - 
+2018-04-22  13:11.04  views.py:257   ===== END TEST (127.0.0.1) = ri.0 wr.0 na.45  - THE TEST IS FAILED! - 
+2018-04-22  13:11.08  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  13:11.08  views.py:176   TEST 127.0.0.1, #1
+2018-04-22  13:11.14  views.py:176   TEST 127.0.0.1, #2
+2018-04-22  13:11.18  views.py:176   TEST 127.0.0.1, #41
+2018-04-22  13:11.20  views.py:176   TEST 127.0.0.1, #2
+2018-04-22  13:11.21  views.py:176   TEST 127.0.0.1, #2
+2018-04-22  13:11.22  views.py:176   TEST 127.0.0.1, #2
+2018-04-22  13:11.23  views.py:176   TEST 127.0.0.1, #2
+2018-04-22  13:11.25  views.py:176   TEST 127.0.0.1, #1
+2018-04-22  13:11.26  views.py:176   TEST 127.0.0.1, #1
+2018-04-22  13:11.27  views.py:176   TEST 127.0.0.1, #1
+2018-04-22  13:11.29  views.py:176   TEST 127.0.0.1, #2
+2018-04-22  13:11.30  views.py:176   TEST 127.0.0.1, #2
+2018-04-22  13:11.33  views.py:257   ===== END TEST (127.0.0.1) = ri.1 wr.1 na.43  - THE TEST IS FAILED! - 
+2018-04-22  13:11.37  views.py:257   ===== END TEST (127.0.0.1) = ri.1 wr.1 na.43  - THE TEST IS FAILED! - 
+2018-04-22  13:11.39  views.py:257   ===== END TEST (127.0.0.1) = ri.1 wr.1 na.43  - THE TEST IS FAILED! - 
+2018-04-22  13:11.42  views.py:257   ===== END TEST (127.0.0.1) = ri.1 wr.1 na.43  - THE TEST IS FAILED! - 
+2018-04-22  13:11.45  views.py:257   ===== END TEST (127.0.0.1) = ri.1 wr.1 na.43  - THE TEST IS FAILED! - 
+2018-04-22  13:52.36  views.py:63   LEARN (127.0.0.1) sec.2  #1 (of 25)
+2018-04-22  13:56.08  views.py:63   LEARN (127.0.0.1) sec.2  #1 (of 25)
+2018-04-22  13:57.13  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  13:57.13  views.py:176   TEST 127.0.0.1, #1
+2018-04-22  14:00.39  views.py:63   LEARN (127.0.0.1) sec.2  #1 (of 25)
+2018-04-22  14:00.55  views.py:103   ---------- CREATE NEW TEST ----------
+2018-04-22  14:00.55  views.py:176   TEST 127.0.0.1, #1
+2018-04-22  14:01.00  views.py:176   TEST 127.0.0.1, #2
+2018-04-22  14:01.00  views.py:176   TEST 127.0.0.1, #2
+2018-04-22  14:01.03  views.py:176   TEST 127.0.0.1, #3
+2018-04-22  14:01.06  views.py:176   TEST 127.0.0.1, #4
+2018-04-22  14:01.09  views.py:176   TEST 127.0.0.1, #5
+2018-04-22  14:01.11  views.py:176   TEST 127.0.0.1, #11
+2018-04-22  14:01.14  views.py:176   TEST 127.0.0.1, #12
+2018-04-22  14:01.17  views.py:176   TEST 127.0.0.1, #13
+2018-04-22  14:01.20  views.py:176   TEST 127.0.0.1, #14
+2018-04-22  14:01.25  views.py:257   ===== END TEST (127.0.0.1) = ri.1 wr.7 na.37  - THE TEST IS FAILED! - 
+2018-04-22  14:01.31  views.py:257   ===== END TEST (127.0.0.1) = ri.1 wr.7 na.37  - THE TEST IS FAILED! - 
+2018-04-22  14:01.33  views.py:257   ===== END TEST (127.0.0.1) = ri.1 wr.7 na.37  - THE TEST IS FAILED! - 
+2018-04-22  14:01.35  views.py:257   ===== END TEST (127.0.0.1) = ri.1 wr.7 na.37  - THE TEST IS FAILED! - 
+2018-04-22  14:01.39  views.py:257   ===== END TEST (127.0.0.1) = ri.1 wr.7 na.37  - THE TEST IS FAILED! - 
+2018-04-22  14:01.43  views.py:257   ===== END TEST (127.0.0.1) = ri.1 wr.7 na.37  - THE TEST IS FAILED! - 
+2018-04-22  14:01.45  views.py:257   ===== END TEST (127.0.0.1) = ri.1 wr.7 na.37  - THE TEST IS FAILED! - 
+2018-04-22  14:01.46  views.py:257   ===== END TEST (127.0.0.1) = ri.1 wr.7 na.37  - THE TEST IS FAILED! - 
+2018-04-22  14:01.49  views.py:257   ===== END TEST (127.0.0.1) = ri.1 wr.7 na.37  - THE TEST IS FAILED! - 
+2018-04-22  14:01.51  views.py:257   ===== END TEST (127.0.0.1) = ri.1 wr.7 na.37  - THE TEST IS FAILED! - 
+2018-04-22  14:01.52  views.py:257   ===== END TEST (127.0.0.1) = ri.1 wr.7 na.37  - THE TEST IS FAILED! - 
+2018-04-22  14:01.55  views.py:257   ===== END TEST (127.0.0.1) = ri.1 wr.7 na.37  - THE TEST IS FAILED! - 
+2018-04-22  14:01.58  views.py:257   ===== END TEST (127.0.0.1) = ri.1 wr.7 na.37  - THE TEST IS FAILED! - 
+2018-04-22  14:02.04  views.py:257   ===== END TEST (127.0.0.1) = ri.1 wr.7 na.37  - THE TEST IS FAILED! - 

@@ -11,7 +11,7 @@ DO_LOGGING = True
 
 if DO_LOGGING:
     logging.basicConfig(format="%(asctime)s  %(filename)s:%(lineno)d  %(message)s",
-                        datefmt="%Y-%m-%d  %H:%M.%S", level=logging.DEBUG, filename='norveg.log')
+        datefmt="%Y-%m-%d  %H:%M.%S", level=logging.DEBUG, filename='norveg.log')
 
 
 css_class_current = 'badge badge-pill grey darken-2'
@@ -100,14 +100,15 @@ def learning(request, section_number, question_num_in_section):
 
 
 def create_test():
-    if DO_LOGGING:
-        logging.info(f' ---------- CREATE NEW TEST ----------')
+    if DO_LOGGING: logging.info(f' ---------- CREATE NEW TEST ----------')
 
     TestQuestion.objects.all().delete()
     TestAnswer.objects.all().delete()
 
     sec_rand = list(range(1, 27))
     random.shuffle(sec_rand)
+
+    qnum_in_test = 0
 
     for section_num in sec_rand:
         am_for_test = section_question[str(section_num)]['amount_for_test']
@@ -116,12 +117,12 @@ def create_test():
             str(section_num)).values_list('id', 'number', 'section', 'text_eng', 'text_rus', 'text_nor', 'image')), am_for_test)
 
         for quest in ls_questions:
-            TestQuestion.objects.create(q_num=quest[1], section=quest[2], text_eng=quest[3], text_rus=quest[4],
-                text_nor=quest[5], image=quest[6], css_class=css_class_no_answer)
+            qnum_in_test += 1
 
-            ls_answers = list(Answer.objects.filter(question=quest[0]).values_list(
-                'id', 'question', 'letter', 'text_eng', 'text_rus', 'text_nor', 'correct'))
+            TestQuestion.objects.create(q_num_in_test=qnum_in_test, q_num=quest[1], section=quest[2],
+                text_eng=quest[3], text_rus=quest[4], text_nor=quest[5], image=quest[6], css_class=css_class_no_answer)
 
+            ls_answers = list(Answer.objects.filter(question=quest[0]).values_list('id', 'question', 'letter', 'text_eng', 'text_rus', 'text_nor', 'correct'))
             random.shuffle(ls_answers)
 
             a_num = 0
@@ -132,16 +133,20 @@ def create_test():
                 TestAnswer.objects.create(q_num=answer[1], letter=answer[2], text_eng=answer[3], text_rus=answer[4],
                     text_nor=answer[5], correct=answer[6], user_answer='', checkbox='checkbox_' + str(a_num))
 
+    # print(f'-- create_test -- \t {list(TestQuestion.objects.all().values_list("q_num_in_test","q_num"))} \n')
+
 
 def user_answer_processing(user_answer):
     arr_split_user_answer = user_answer.split('-')
-    q_order_num = int(arr_split_user_answer[0]) - 1
-    qnum = TestQuestion.objects.all()[q_order_num].q_num
+    q_order_num = int(arr_split_user_answer[0])
+
+    q_curr = TestQuestion.objects.filter(q_num_in_test__exact=q_order_num)
+    qnum = q_curr[0].q_num
 
     is_answer = False
 
     for loop in range(1, len(arr_split_user_answer)):
-        curr_answer = TestAnswer.objects.filter(q_num__exact=qnum)[loop - 1]
+        curr_answer = TestAnswer.objects.filter(q_num__exact=qnum).order_by('checkbox')[loop - 1]
 
         if arr_split_user_answer[loop] == '1':
             is_answer = True
@@ -152,14 +157,10 @@ def user_answer_processing(user_answer):
             curr_answer.user_answer = ''
             curr_answer.save()
 
-    curr_question = TestQuestion.objects.all()[q_order_num]
-
     if is_answer:
-        curr_question.css_class = css_class_is_answer
-        curr_question.save()
+        q_curr.update(css_class=css_class_is_answer)
     else:
-        curr_question.css_class = css_class_no_answer
-        curr_question.save()
+        q_curr.update(css_class=css_class_no_answer)
 
 
 def testing(request, new_test, question_number, user_answer=None):
@@ -169,19 +170,17 @@ def testing(request, new_test, question_number, user_answer=None):
     if user_answer:
         user_answer_processing(user_answer)
 
-    q_curr = TestQuestion.objects.all()[question_number-1]
-    q_curr.css_class = css_class_current
-    q_curr.save()
+    q_curr = TestQuestion.objects.filter(q_num_in_test__exact=question_number)
+    q_curr.update(css_class=css_class_current)
 
-    if DO_LOGGING:
-        logging.info(f' TEST {request.META["REMOTE_ADDR"]}, #{question_number}')
+    if DO_LOGGING: logging.info(f' TEST {request.META["REMOTE_ADDR"]}, #{question_number}')
 
     return render(request, 'app_quiz/testing.html', {
         'q_amount': TestQuestion.objects.all().count(),
-        'test_question': TestQuestion.objects.all()[question_number-1],
-        'test_answers': TestAnswer.objects.filter(q_num=TestQuestion.objects.all()[question_number-1].q_num),
+        'test_question': q_curr[0],
+        'test_answers': TestAnswer.objects.filter(q_num=q_curr[0].q_num).order_by('checkbox'),
         'question_number': question_number,
-        'lst_questions_map': list(TestQuestion.objects.all().values_list('css_class', flat=True)),
+        'lst_questions_map': list(TestQuestion.objects.order_by('q_num_in_test').values_list('css_class', flat=True)),
         'new_test': new_test
     })
 
@@ -190,16 +189,18 @@ def set_endtest_qmap():
     for question_loop in range(TestQuestion.objects.all().count()):
         is_answer_temp = False
         is_right_answer_temp = True
-        curr_question = TestQuestion.objects.all()[question_loop]
+        curr_question = TestQuestion.objects.order_by('q_num_in_test')[question_loop]
         qnum = curr_question.q_num
 
         answers_amount = TestAnswer.objects.filter(q_num__exact=qnum).count()
 
         for answer_loop in range(answers_amount):
-            if TestAnswer.objects.filter(q_num__exact=qnum)[answer_loop].user_answer == 'checked':
+            curr_answer = TestAnswer.objects.filter(q_num__exact=qnum).order_by('checkbox')[answer_loop]
+
+            if curr_answer.user_answer == 'checked':
                 is_answer_temp = True
 
-                if TestAnswer.objects.filter(q_num__exact=qnum)[answer_loop].correct != 'true':
+                if curr_answer.correct != 'true':
                     is_right_answer_temp = False
 
         if is_answer_temp:
@@ -219,7 +220,7 @@ def is_test_pass():
     is_test_pass_message = ''
 
     for question_loop in range(TestQuestion.objects.all().count()):
-        curr_question = TestQuestion.objects.all()[question_loop]
+        curr_question = TestQuestion.objects.order_by('q_num_in_test')[question_loop]
 
         if curr_question.css_class == css_class_right_answer:
             right_answer_amount += 1
@@ -253,14 +254,15 @@ def end_test(request, user_answer):
         question_number = int(user_answer)
         right_answer_amount, wrong_answer_amount, not_answer, is_test_pass_message, is_test_pass_color, is_test_pass_image = is_test_pass()
 
-    if DO_LOGGING:
-        logging.info(f' ===== END TEST ({request.META["REMOTE_ADDR"]}) = ri.{right_answer_amount} wr.{wrong_answer_amount} na.{not_answer} {is_test_pass_message}')
+    if DO_LOGGING: logging.info(f' ===== END TEST ({request.META["REMOTE_ADDR"]}) = ri.{right_answer_amount} wr.{wrong_answer_amount} na.{not_answer} {is_test_pass_message}')
+
+    q_curr = TestQuestion.objects.filter(q_num_in_test__exact=question_number)
 
     return render(request, 'app_quiz/end_test.html', {
-        'lst_questions_map': list(TestQuestion.objects.all().values_list('css_class', flat=True)),
+        'lst_questions_map': list(TestQuestion.objects.order_by('q_num_in_test').values_list('css_class', flat=True)),
         'show_question': show_question,
-        'test_question': TestQuestion.objects.all()[question_number-1],
-        'test_answers': TestAnswer.objects.filter(q_num=TestQuestion.objects.all()[question_number-1].q_num),
+        'test_question': q_curr[0],
+        'test_answers': TestAnswer.objects.filter(q_num=q_curr[0].q_num).order_by('checkbox'),
         'question_number': question_number,
         'right_answer_amount': right_answer_amount,
         'wrong_answer_amount': wrong_answer_amount,

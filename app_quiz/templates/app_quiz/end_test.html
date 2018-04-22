@@ -18,8 +18,6 @@
     <!-- Questions map { -->
     {% for quest in lst_questions_map %}
         <span id="qmap_{{ forloop.counter }}" class="{{ quest }}" style="margin: 3px; font-size: medium; cursor: pointer" onclick="qmap_click({{ forloop.counter }})">{{ forloop.counter|qnum_to_string }}</span>&nbsp;&nbsp;
-
-{#        <span id="qmap_{{ forloop.counter }}" class="{{ quest.1 }}" style="margin: 3px; font-size: medium; cursor: pointer" onclick="qmap_click({{ quest.0 }})">{{ quest.0|qnum_to_string }}</span>&nbsp;&nbsp;#}
     {% endfor %}
     <!-- Questions map } -->
 
@@ -59,25 +57,26 @@
 
                 {% for answer in test_answers.values %}
                     <div>
-{#                        <input type="checkbox" class="filled-in" id="{{ answer.checkbox }}" {{ answer.user_answer }}>#}
-{#                        <label for="{{ answer.checkbox }}">{{ answer.text_eng }} - {{ answer.letter }}. {{ answer.correct }}</label>#}
-
                         {% if answer.correct == 'false' %}
                             {% if answer.user_answer == 'checked' %}
                                 <input type="checkbox" class="filled-in checkbox-row" id="{{ answer.checkbox }}">
                                 <label style="color: red; text-decoration: line-through;" for="{{ answer.checkbox }}">{{ answer.text_eng }} - {{ answer.letter }}. {{ answer.correct }}</label>
+{#                                <label style="color: red; text-decoration: line-through;" for="{{ answer.checkbox }}">{{ answer.text_eng }}</label>#}
                             {% else %}
                                 <input style="color: green;" type="checkbox" class="filled-in" id="{{ answer.checkbox }}">
                                 <label for="{{ answer.checkbox }}">{{ answer.text_eng }} - {{ answer.letter }}. {{ answer.correct }}</label>
+{#                                <label for="{{ answer.checkbox }}">{{ answer.text_eng }}</label>#}
                             {% endif %}
 
                         {% elif answer.correct == 'true' %}
                             {% if answer.user_answer == 'checked' %}
                                 <input style="color: green;" type="checkbox" class="filled-in" id="{{ answer.checkbox }}" checked="checked">
                                 <label style="color: green;" for="{{ answer.checkbox }}">{{ answer.text_eng }} - {{ answer.letter }}. {{ answer.correct }}</label>
+{#                                <label style="color: green;" for="{{ answer.checkbox }}">{{ answer.text_eng }}</label>#}
                             {% else %}
                                 <input style="color: green;" type="checkbox" class="filled-in" id="{{ answer.checkbox }}" checked="checked">
                                 <label for="{{ answer.checkbox }}">{{ answer.text_eng }} - {{ answer.letter }}. {{ answer.correct }}</label>
+{#                                <label for="{{ answer.checkbox }}">{{ answer.text_eng }}</label>#}
                             {% endif %}
                         {% endif %}
 

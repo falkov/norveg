@@ -36,6 +36,7 @@
 
         <div style="position: absolute; right: 20px; color: white">
             {{ question_number }} of {{ q_amount }}  - sec. {{ test_question.section }},  # {{ test_question.q_num }}
+{#            {{ question_number }} of {{ q_amount }}#}
         </div>
     </ul>
 
@@ -60,6 +61,7 @@
                 <div>
                     <input type="checkbox" class="filled-in" id="{{ answer.checkbox }}" {{ answer.user_answer }}>
                     <label for="{{ answer.checkbox }}">{{ answer.text_eng }} - {{ answer.letter }}. {{ answer.correct }}</label>
+{#                    <label for="{{ answer.checkbox }}">{{ answer.text_eng }}</label>#}
                 </div>
             {% endfor %}
 

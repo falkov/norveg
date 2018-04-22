@@ -60,23 +60,39 @@
                         {% if answer.correct == 'false' %}
                             {% if answer.user_answer == 'checked' %}
                                 <input type="checkbox" class="filled-in checkbox-row" id="{{ answer.checkbox }}">
-                                <label style="color: red; text-decoration: line-through;" for="{{ answer.checkbox }}">{{ answer.text_eng }} - {{ answer.letter }}. {{ answer.correct }}</label>
-{#                                <label style="color: red; text-decoration: line-through;" for="{{ answer.checkbox }}">{{ answer.text_eng }}</label>#}
+
+                                {% if show_answers %}
+                                    <label style="color: red; text-decoration: line-through;" for="{{ answer.checkbox }}">{{ answer.text_eng }} - {{ answer.letter }}. {{ answer.correct }}</label>
+                                {% else %}
+                                    <label style="color: red; text-decoration: line-through;" for="{{ answer.checkbox }}">{{ answer.text_eng }}</label>
+                                {% endif %}
                             {% else %}
                                 <input style="color: green;" type="checkbox" class="filled-in" id="{{ answer.checkbox }}">
-                                <label for="{{ answer.checkbox }}">{{ answer.text_eng }} - {{ answer.letter }}. {{ answer.correct }}</label>
-{#                                <label for="{{ answer.checkbox }}">{{ answer.text_eng }}</label>#}
+
+                                {% if show_answers %}
+                                    <label for="{{ answer.checkbox }}">{{ answer.text_eng }} - {{ answer.letter }}. {{ answer.correct }}</label>
+                                {% else %}
+                                    <label for="{{ answer.checkbox }}">{{ answer.text_eng }}</label>
+                                {% endif %}
                             {% endif %}
 
                         {% elif answer.correct == 'true' %}
                             {% if answer.user_answer == 'checked' %}
                                 <input style="color: green;" type="checkbox" class="filled-in" id="{{ answer.checkbox }}" checked="checked">
-                                <label style="color: green;" for="{{ answer.checkbox }}">{{ answer.text_eng }} - {{ answer.letter }}. {{ answer.correct }}</label>
-{#                                <label style="color: green;" for="{{ answer.checkbox }}">{{ answer.text_eng }}</label>#}
+
+                                {% if show_answers %}
+                                    <label style="color: green;" for="{{ answer.checkbox }}">{{ answer.text_eng }} - {{ answer.letter }}. {{ answer.correct }}</label>
+                                {% else %}
+                                    <label style="color: green;" for="{{ answer.checkbox }}">{{ answer.text_eng }}</label>
+                                {% endif %}
                             {% else %}
                                 <input style="color: green;" type="checkbox" class="filled-in" id="{{ answer.checkbox }}" checked="checked">
-                                <label for="{{ answer.checkbox }}">{{ answer.text_eng }} - {{ answer.letter }}. {{ answer.correct }}</label>
-{#                                <label for="{{ answer.checkbox }}">{{ answer.text_eng }}</label>#}
+
+                                {% if show_answers %}
+                                    <label for="{{ answer.checkbox }}">{{ answer.text_eng }} - {{ answer.letter }}. {{ answer.correct }}</label>
+                                {% else %}
+                                    <label for="{{ answer.checkbox }}">{{ answer.text_eng }}</label>
+                                {% endif %}
                             {% endif %}
                         {% endif %}
 
@@ -93,8 +109,6 @@
 
         <div>
 {#            <button type="button" id="btn_prev" class="btn btn-rounded" style="background: #570230;" onclick="btn_prev_click()"><i class="fa fa-arrow-left" aria-hidden="true"></i> &nbsp;&nbsp;prev</button>#}
-{#            <button type="button" id="btn_next" class="btn btn-rounded" style="background: #570230;" onclick="btn_next_click()"> next &nbsp;&nbsp; <i class="fa fa-arrow-right" aria-hidden="true"></i></button>#}
-{#            <button type="button" class="btn btn-rounded" style="background: #466e4a; position: absolute; right: 20px;" onclick="btn_endtest_click()">END TEST &nbsp;&&nbsp; CHECK</button>#}
         </div>
     </div>
     <!-- TestCard } -->

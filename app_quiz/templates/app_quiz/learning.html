@@ -53,8 +53,12 @@
             {% for answer in dict_answers.values %}
                 <div class="form-group">
                     <input type="checkbox" class="filled-in" id="{{ answer.checkbox_eng }}" onclick="$('#{{ answer.checkbox_eng }}'.replace('eng','rus')).prop('checked', $('#{{ answer.checkbox_eng }}').prop('checked'))">
-                    <label for="{{ answer.checkbox_eng }}">{{ answer.eng }} - {{ answer.letter }}. {{ answer.correct }}</label>
-{#                    <label for="{{ answer.checkbox_eng }}">{{ answer.eng }}</label>#}
+
+                    {% if show_answers %}
+                        <label for="{{ answer.checkbox_eng }}">{{ answer.eng }} - {{ answer.letter }}. {{ answer.correct }}</label>
+                    {% else %}
+                        <label for="{{ answer.checkbox_eng }}">{{ answer.eng }}</label>
+                    {% endif %}
                 </div>
             {% endfor %}
 

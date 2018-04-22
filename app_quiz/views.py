@@ -8,6 +8,7 @@ import os
 import logging
 
 DO_LOGGING = True
+SHOW_ANSWERS = True
 
 if DO_LOGGING:
     logging.basicConfig(format="%(asctime)s  %(filename)s:%(lineno)d  %(message)s",
@@ -96,6 +97,7 @@ def learning(request, section_number, question_num_in_section):
         'right_img': 'yes_' + str(random.choice(range(1, 9))) + '.gif',
         'wrong_msg': random.choice(['NO! YOU ARE WRONG!', 'WRONG!', 'WRONG ANSWER!', 'INCORRECT ANSWER!', 'THAT IS WRONG!']),
         'wrong_img': 'no_' + str(random.choice(range(1, 10))) + '.gif',
+        'show_answers': SHOW_ANSWERS,
     })
 
 
@@ -181,7 +183,8 @@ def testing(request, new_test, question_number, user_answer=None):
         'test_answers': TestAnswer.objects.filter(q_num=q_curr[0].q_num).order_by('checkbox'),
         'question_number': question_number,
         'lst_questions_map': list(TestQuestion.objects.order_by('q_num_in_test').values_list('css_class', flat=True)),
-        'new_test': new_test
+        'new_test': new_test,
+        'show_answers': SHOW_ANSWERS,
     })
 
 
@@ -270,4 +273,5 @@ def end_test(request, user_answer):
         'is_test_pass_message': is_test_pass_message,
         'is_test_pass_color': is_test_pass_color,
         'is_test_pass_image': is_test_pass_image,
+        'show_answers': SHOW_ANSWERS,
     })
